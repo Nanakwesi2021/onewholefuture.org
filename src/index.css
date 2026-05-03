@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Work+Sans:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* New Brand Identity: One Whole Future Foundation */
+  --color-primary: #003057;           /* Deep Navy */
+  --color-primary-container: #e6edf2;
+  --color-on-primary: #ffffff;
+  
+  --color-secondary: #4a7c44;         /* Forest Green */
+  --color-secondary-container: #edf2ed;
+  --color-on-secondary: #ffffff;
+  
+  --color-tertiary: #c5a059;          /* Golden Ochre */
+  --color-tertiary-container: #f9f5ee;
+  --color-on-tertiary: #1a1a1a;
+  
+  --color-accent: #f2c75c;            /* Sunlit Yellow */
+  
+  --color-background: #f8f9fa;        /* Clean light background */
+  --color-on-background: #003057;     /* Deep Navy text */
+  
+  --color-surface: #ffffff;
+  --color-on-surface: #1a1a1a;
+  --color-on-surface-variant: #4d4d4d;
+  
+  --color-outline: #ced4da;
+  --color-outline-variant: #e9ecef;
+  
+  --color-error: #d00000;
+  --color-on-error: #ffffff;
+  --color-error-container: #fff0f0;
+  --color-on-error-container: #600000;
+
+  /* Overriding surface containers for a light, airy feel */
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f8f9fa;
+  --color-surface-container: #f1f3f5;
+  --color-surface-container-high: #e9ecef;
+  --color-surface-container-highest: #dee2e6;
+
+  /* Fixed colors for legacy support if needed */
+  --color-primary-fixed: #e6edf2;
+  --color-on-primary-fixed: #003057;
+  --color-secondary-fixed: #edf2ed;
+  --color-on-secondary-fixed: #1a3d16;
+  --color-tertiary-fixed: #f9f5ee;
+  --color-on-tertiary-fixed: #5c4314;
+  --color-tertiary-fixed-dim: #d9c7a5;
+
+
+
+  --radius-default: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 3rem;
+  --radius-full: 9999px;
+
+  --font-headline: "Manrope", sans-serif;
+  --font-body: "Work Sans", sans-serif;
+  --font-label: "Work Sans", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-surface font-body text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed;
+  }
+}
+
+@keyframes kenBurns {
+  0%   { transform: scale(1) translate(0, 0); }
+  50%  { transform: scale(1.08) translate(-1%, 1%); }
+  100% { transform: scale(1) translate(0, 0); }
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeSlideLeft {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeSlideRight {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%      { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes imageCycle {
+  0%   { opacity: 1; }
+  30%  { opacity: 1; }
+  33%  { opacity: 0; }
+  96%  { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@layer components {
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  .editorial-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+  }
+  .bleed-right {
+    margin-right: -100vw;
+    padding-right: 100vw;
+  }
+  .hero-img-ken-burns {
+    animation: kenBurns 20s ease-in-out infinite;
+  }
+  .hero-animate-1 {
+    opacity: 0;
+    animation: fadeSlideUp 0.8s ease forwards;
+    animation-delay: 0.1s;
+  }
+  .hero-animate-2 {
+    opacity: 0;
+    animation: fadeSlideUp 0.8s ease forwards;
+    animation-delay: 0.3s;
+  }
+  .hero-animate-3 {
+    opacity: 0;
+    animation: fadeSlideUp 0.8s ease forwards;
+    animation-delay: 0.5s;
+  }
+  .hero-animate-4 {
+    opacity: 0;
+    animation: fadeSlideUp 0.8s ease forwards;
+    animation-delay: 0.7s;
+  }
+  .hero-img-animate {
+    opacity: 0;
+    animation: fadeSlideLeft 1s ease forwards;
+    animation-delay: 0.4s;
+  }
+  .card-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  .img-cycle-1 {
+    animation: imageCycle 9s ease-in-out infinite;
+    animation-delay: 0s;
+  }
+  .img-cycle-2 {
+    animation: imageCycle 9s ease-in-out infinite;
+    animation-delay: 3s;
+  }
+  .img-cycle-3 {
+    animation: imageCycle 9s ease-in-out infinite;
+    animation-delay: 6s;
+  }
+
+  @keyframes loading-bar {
+    0% { transform: translateX(-100%); }
+    50% { transform: translateX(0); }
+    100% { transform: translateX(100%); }
+  }
+  
+  .animate-loading-bar {
+    animation: loading-bar 2s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  .skeleton {
+    background: linear-gradient(90deg, #f3f4f1 25%, #e8e8e6 50%, #f3f4f1 75%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite linear;
+  }
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#17362e",
+                    "tertiary": "#442b06",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed-dim": "#e9bf8e",
+                    "secondary-container": "#d4e7df",
+                    "outline": "#717975",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#accec2",
+                    "inverse-on-surface": "#f0f1ee",
+                    "tertiary-fixed": "#ffddb7",
+                    "secondary": "#51625c",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#5e411a",
+                    "on-secondary-fixed": "#0f1e1a",
+                    "tertiary-container": "#5e411a",
+                    "surface-variant": "#e2e3e0",
+                    "primary-fixed": "#c7eade",
+                    "on-surface": "#1a1c1b",
+                    "secondary-fixed": "#d4e7df",
+                    "on-background": "#1a1c1b",
+                    "surface-container": "#edeeeb",
+                    "outline-variant": "#c1c8c4",
+                    "on-error": "#ffffff",
+                    "on-surface-variant": "#414845",
+                    "primary-fixed-dim": "#accec2",
+                    "on-primary-fixed-variant": "#2e4d44",
+                    "on-secondary-fixed-variant": "#3a4a45",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#45655b",
+                    "surface-container-high": "#e8e8e6",
+                    "surface-dim": "#d9dad7",
+                    "surface-container-highest": "#e2e3e0",
+                    "surface-bright": "#f9faf7",
+                    "background": "#f9faf7",
+                    "inverse-surface": "#2f312f",
+                    "secondary-fixed-dim": "#b8cbc3",
+                    "error-container": "#ffdad6",
+                    "surface": "#f9faf7",
+                    "on-tertiary-fixed": "#2a1700",
+                    "on-primary-fixed": "#002019",
+                    "on-secondary-container": "#576862",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#f3f4f1",
+                    "on-tertiary-container": "#d7ae7e",
+                    "on-primary-container": "#9bbdb1",
+                    "primary-container": "#2e4d44"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Work Sans"],
+                    "label": ["Work Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-kerning {
+            letter-spacing: -0.04em;
+        }
+        .organic-bleed {
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased min-h-screen flex flex-col overflow-hidden">
+<!-- Top Branding Anchor (Suppressed Nav) -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-12 py-10">
+<div class="text-xl font-extrabold tracking-tighter text-primary font-headline uppercase">
+            onewholefuture
+        </div>
+<div class="text-primary/40 font-label text-xs tracking-widest font-semibold uppercase">
+            Chapter I: Initiation
+        </div>
+</header>
+<main class="flex-grow flex flex-col md:flex-row relative">
+<!-- Background Texture Layer -->
+<div class="absolute inset-0 bg-surface-container-low opacity-40 -z-10"></div>
+<!-- Left Narrative Canvas: High Impact Editorial Layout -->
+<section class="w-full md:w-3/5 flex flex-col justify-center px-8 md:px-24 pt-32 pb-20 z-10">
+<div class="mb-8">
+<span class="inline-block bg-tertiary-fixed text-on-tertiary-fixed-variant font-label text-[10px] tracking-[0.25em] font-bold uppercase px-3 py-1 rounded-sm mb-6">
+                    Active Mission: 2024
+                </span>
+<h1 class="font-headline text-5xl md:text-7xl lg:text-8xl font-extrabold text-primary leading-[0.95] editorial-kerning">
+                    The Guardian's Path: <br/>
+<span class="text-tertiary">Volunteer Orientation</span>
+</h1>
+</div>
+<div class="max-w-lg">
+<p class="font-body text-lg md:text-xl text-on-surface-variant leading-relaxed mb-12">
+                    Preserving the human thread through every generation.
+                </p>
+<div class="flex items-center gap-8">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-md font-headline text-sm font-bold uppercase tracking-widest hover:bg-primary-container transition-all duration-300 shadow-[0_10px_30px_rgba(23,54,46,0.2)]">
+                        Begin Journey
+                    </button>
+<div class="flex flex-col">
+<span class="font-label text-[10px] uppercase tracking-tighter opacity-50">Authorized Personnel</span>
+<span class="font-headline font-bold text-primary text-sm">Archival Registry</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Visual Canvas: Asymmetric Portrait Bleed -->
+<section class="w-full md:w-2/5 relative h-[512px] md:h-full">
+<div class="absolute inset-0 bg-primary/10 overflow-hidden md:organic-bleed shadow-2xl">
+<img class="w-full h-full object-cover grayscale brightness-90 contrast-125" data-alt="Stunning black and white high-contrast editorial portrait of an elderly man with deep wrinkles and expressive eyes against a dark moody background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGHiEi8rYsSXdKY_ObTulYqPe2bQQvbOf62VHMG46HT-g_YV1X5xfPxz5hltCMckk2zQsla3yDWlUASfMmLqpbkRpaAsFikRqP4gRHNNDLx1HjWlKfqlfl9LsZXs2GwjdYL-0o4E9hU054RUpiL-rcYNT0qKY0yqYhI4MV8QyQeEHmH1IZkzFl9Vr_m3LDrnGlTVLKseIFqTDrdK4xOZR5jFN2M3NRRJJ9A74msHmxsXB_3hhXIpHMat3nU3ETDF_uiFYHCac_VTYF"/>
+<!-- Tonal Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+</div>
+<!-- Contextual Archive Badge -->
+<div class="absolute bottom-12 right-12 md:right-16 text-right">
+<div class="bg-surface-container-lowest/80 backdrop-blur-xl p-6 rounded-xl shadow-2xl border-l-4 border-tertiary max-w-[240px]">
+<span class="material-symbols-outlined text-tertiary mb-2" data-icon="fingerprint">fingerprint</span>
+<p class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant leading-tight">
+                        Subject: Legacy #0942<br/>
+                        Archive: Oral Histories
+                    </p>
+<p class="font-headline font-bold text-xs text-primary mt-2">
+                        "Stories are the only inheritance that never loses value."
+                    </p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer: Tonal Shift Branding Anchor -->
+<footer class="w-full px-12 py-8 flex flex-col md:flex-row justify-between items-end md:items-center bg-surface border-t border-outline-variant/10">
+<div class="flex gap-12 items-center">
+<div class="flex flex-col">
+<span class="font-label text-[9px] uppercase tracking-widest opacity-40">Slide Number</span>
+<span class="font-headline font-extrabold text-2xl text-primary leading-none">01</span>
+</div>
+<div class="h-8 w-px bg-outline-variant/30"></div>
+<div class="hidden md:block">
+<span class="font-label text-[9px] uppercase tracking-widest opacity-40 block mb-1">Editorial Authority</span>
+<p class="text-xs font-medium text-on-surface-variant max-w-[200px]">© 2024 onewholefuture. Narrative Stewardship Program.</p>
+</div>
+</div>
+<div class="flex items-center gap-4 mt-6 md:mt-0">
+<span class="font-label text-[10px] uppercase tracking-[0.2em] font-bold text-primary">Scroll to navigate</span>
+<span class="material-symbols-outlined text-primary text-xl" data-icon="arrow_downward">arrow_downward</span>
+</div>
+</footer>
+</body></html>

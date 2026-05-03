@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>onewholefuture | News &amp; Media</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#2e4d44",
+                        "tertiary-fixed": "#ffddb7",
+                        "on-background": "#1a1c1b",
+                        "on-tertiary-fixed": "#2a1700",
+                        "secondary-fixed": "#d4e7df",
+                        "on-primary-container": "#9bbdb1",
+                        "inverse-surface": "#2f312f",
+                        "secondary-container": "#d4e7df",
+                        "primary": "#17362e",
+                        "secondary": "#51625c",
+                        "outline-variant": "#c1c8c4",
+                        "surface": "#f9faf7",
+                        "background": "#f9faf7",
+                        "primary-container": "#2e4d44",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e2e3e0",
+                        "inverse-primary": "#accec2",
+                        "surface-variant": "#e2e3e0",
+                        "primary-fixed": "#c7eade",
+                        "surface-bright": "#f9faf7",
+                        "surface-dim": "#d9dad7",
+                        "on-tertiary-container": "#d7ae7e",
+                        "surface-container-high": "#e8e8e6",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#0f1e1a",
+                        "surface-container": "#edeeeb",
+                        "tertiary-container": "#5e411a",
+                        "on-tertiary-fixed-variant": "#5e411a",
+                        "on-primary-fixed": "#002019",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#f0f1ee",
+                        "primary-fixed-dim": "#accec2",
+                        "tertiary": "#442b06",
+                        "secondary-fixed-dim": "#b8cbc3",
+                        "surface-tint": "#45655b",
+                        "tertiary-fixed-dim": "#e9bf8e",
+                        "surface-container-low": "#f3f4f1",
+                        "on-surface": "#1a1c1b",
+                        "outline": "#717975",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#576862",
+                        "on-surface-variant": "#414845",
+                        "on-secondary-fixed-variant": "#3a4a45"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Work Sans"],
+                        "label": ["Work Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background-color: #f9faf7;
+            color: #1a1c1b;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Manrope', sans-serif;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(26, 28, 27, 0.06);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-white/85 dark:bg-stone-900/85 backdrop-blur-xl shadow-[0_20px_40px_rgba(26,28,27,0.06)] flex justify-between items-center px-8 py-4 max-w-full mx-auto transition-all">
+<div class="text-2xl font-bold text-emerald-950 dark:text-emerald-50 tracking-tighter">onewholefuture</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-manrope text-sm font-semibold tracking-tight text-stone-600 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-emerald-300 transition-colors duration-300" href="#">About Us</a>
+<a class="font-manrope text-sm font-semibold tracking-tight text-stone-600 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-emerald-300 transition-colors duration-300" href="#">Our Work</a>
+<a class="font-manrope text-sm font-semibold tracking-tight text-emerald-900 dark:text-emerald-400 border-b-2 border-emerald-900 dark:border-emerald-400 pb-1" href="#">Ideas</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-emerald-900 dark:text-emerald-500 hover:text-emerald-800 transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-md font-manrope text-sm font-semibold tracking-tight scale-98 active:opacity-80 transition-all">
+                Ways to Give
+            </button>
+</div>
+</nav>
+<main class="pt-24 pb-20">
+<!-- Hero Featured Story -->
+<section class="px-8 max-w-7xl mx-auto mb-20">
+<div class="relative group overflow-hidden rounded-xl bg-surface-container-low grid md:grid-cols-12 items-stretch gap-0">
+<div class="md:col-span-7 relative h-[500px] overflow-hidden">
+<img alt="Featured story" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Candid photograph of an elderly artisan in a sunlit workshop, dust particles dancing in the light, warm editorial atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyRUwLdORISHTaUqmRqg4smKZ6wssE4uLX-Uan_jPiJK_Qhqs2TRXyx_o8kGjqHRFuaa7ZrKu2k1aguKj3TaNvPU8s5ep7gslNmOcIe0R_nqCXrBCAs_8k1GVJqOvBEc6eZctpEPn08xBhS8lT063PbhmS5WjABqzrQZCTvtz7s3soRMaQI4luP2qrELdZdIQUktdkHiVWdQtCGWQB-dIyuWeLrQrpsdrO4CawkQm-5gi-zA6yXiWwc1fXBzYOHNCBHjwWj92qmTIT"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
+</div>
+<div class="md:col-span-5 p-12 flex flex-col justify-center bg-surface-container-lowest">
+<span class="text-[0.75rem] font-semibold tracking-[0.2em] uppercase text-tertiary mb-4">In the Field</span>
+<h1 class="text-[2.5rem] leading-[1.1] font-extrabold text-primary mb-6 tracking-tighter">Reshaping the Narrative: Voices from the Rural Frontier</h1>
+<p class="text-body-lg text-on-surface-variant leading-relaxed mb-8">
+                        In an era of rapid digital expansion, we explore how traditional communities are preserving their history while embracing sustainable modern technologies.
+                    </p>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-8 py-3 rounded-md font-semibold text-sm hover:opacity-90 transition-opacity">Read Full Story</button>
+<span class="text-sm text-outline font-medium">12 Min Read</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Feed & Media Center Sidebar -->
+<section class="px-8 max-w-7xl mx-auto">
+<div class="flex flex-col lg:flex-row gap-16">
+<!-- Articles Feed -->
+<div class="flex-grow space-y-16">
+<div class="flex items-end justify-between pb-4 border-b border-outline-variant/20">
+<h2 class="text-3xl font-extrabold text-primary tracking-tighter">Latest Dispatches</h2>
+<div class="flex gap-4 text-sm font-semibold text-stone-500">
+<button class="text-primary border-b-2 border-primary">All</button>
+<button class="hover:text-primary transition-colors">Press Release</button>
+<button class="hover:text-primary transition-colors">Reports</button>
+</div>
+</div>
+<!-- Article Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<!-- Card 1 -->
+<article class="flex flex-col group">
+<div class="aspect-[16/10] overflow-hidden rounded-lg mb-6 bg-surface-container">
+<img alt="Climate report" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Wide shot of a lush green reforestation project under a dramatic overcast sky, moody cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWzqDBLIjSq74fsZxolhtZHaNBzQpDX_97r2gzHw39ahgUM0JVe6BmcoO27hIDsiUkvn7hI_I4FL6pV1ZAIjl58B8V77zPLVBsV5TxclOU8vf7ZAGHsDrmDmtzGsvOgt5ys9r-GywY76eMOH9symC7UjVpM7AcyuDhv3YZC7GLJktEKMXuTajrNWIL9ezYNQ6ETEFFWofZnigjxuF0Yx9YKTdJQbwCiIIv6_RTnNfGWEniN1nLO3fwHG0pjN4tHuAX2lI8oyxBHnEo"/>
+</div>
+<span class="text-[0.7rem] font-bold tracking-widest text-tertiary mb-2 uppercase">Reports</span>
+<h3 class="text-xl font-bold text-on-surface mb-3 leading-snug group-hover:text-primary transition-colors">Annual Impact 2024: The Digital Literacy Surge</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed line-clamp-2">Our comprehensive study on how localized internet access has shifted economic outcomes across 40 distinct regions.</p>
+</article>
+<!-- Card 2 -->
+<article class="flex flex-col group">
+<div class="aspect-[16/10] overflow-hidden rounded-lg mb-6 bg-surface-container">
+<img alt="Technology workshop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Hands of a diverse group of people collaborating on a tactile design project, soft natural overhead light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCexGoEjSyT-4w560MTah2lKzAnSCJlxEhh9sVOG1xQepQVDUEcjaF0RY4xOFhlxFpILa4hSIKF22tmCqOnvUP5w90iqxMTvw0zunLUelTyYildD0cwR2xzQuGN7g89tFwPf0zkL-YTY9iCIO9LAvu0XqiaS-2MwxjooIHvt-PJKWV1g4VxEmn22fbyo6lv-sKAWxAueNTVmREWUlhzbHHYXwG68hkVqNert267n8TdolF47qBqA1dfgI_ZoQrixp_MVN6dvPi8ylje"/>
+</div>
+<span class="text-[0.7rem] font-bold tracking-widest text-secondary mb-2 uppercase">Press Release</span>
+<h3 class="text-xl font-bold text-on-surface mb-3 leading-snug group-hover:text-primary transition-colors">Strategic Partnership with Global Open-Source Initiative</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed line-clamp-2">Announcing a multi-year collaboration to secure digital archiving tools for indigenous knowledge centers.</p>
+</article>
+<!-- Card 3 -->
+<article class="flex flex-col group">
+<div class="aspect-[16/10] overflow-hidden rounded-lg mb-6 bg-surface-container">
+<img alt="Field photography" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A group of storytellers sharing a meal around a wooden table in a high-ceilinged room with large windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFyYlpS3-VTzNOt4ZMaMvtrJ6u3p1BKVp0PQU85QHLxKLs9612asq8mW46ZBW4PXBKNtg9Xzuj3mN01Yzu4P_avLFT-QajP3M8aHRYB_r2NZPz5JZtr7V2vdFer2FaY3je9vfGL_gzjSwufe1SsfPAQPV7KcQoycA8Ey41zRwWCqj5LXz2rMMiaKgYAbiNFTvNURfTxXcuZkrNPkEhyYd2LSMkAkNPHB93T5FiOM0rU7B-kx93_ph4UDhGkctr30Sc7_8tzvVDksYF"/>
+</div>
+<span class="text-[0.7rem] font-bold tracking-widest text-tertiary mb-2 uppercase">In the Field</span>
+<h3 class="text-xl font-bold text-on-surface mb-3 leading-snug group-hover:text-primary transition-colors">Portraits of Resilience: The Archive Photo Series</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed line-clamp-2">Meet the photographers documenting the subtle shifts in daily life across the Mediterranean coastline.</p>
+</article>
+<!-- Card 4 -->
+<article class="flex flex-col group">
+<div class="aspect-[16/10] overflow-hidden rounded-lg mb-6 bg-surface-container">
+<img alt="Research paper" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Minimalist top down view of professional stationery and a fountain pen on textured cream paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHfI1fasDCtWcmkLlVBQD5xahSFPXNCnPD3vpGJO6Eg4lJDlcLrQzcCcKF3ZucxZHccL7P0LphCSpAUhCzJXTYLnWvp7l6swb88rhVAqIIoK2OQXz0YrgU_4eMVF7UVBQnOdXAwi73gtkysLU0pqWIuKjgC_0or06Ce7Hy6bwTFhxPM_JU9SXwQz1qz7-3rbZg3-Dkix5skwj3CmK4gCInV9QnAhXAbHdE4tBLJbzFo9GIzAmWmlsU9rX6NH2qQUhBr1WzjHyM5Q01"/>
+</div>
+<span class="text-[0.7rem] font-bold tracking-widest text-secondary mb-2 uppercase">Reports</span>
+<h3 class="text-xl font-bold text-on-surface mb-3 leading-snug group-hover:text-primary transition-colors">Ethical AI in Cultural Preservation</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed line-clamp-2">An exploration into the frameworks we use to ensure AI tools respect cultural sovereignty and intellectual property.</p>
+</article>
+</div>
+</div>
+<!-- Sidebar / Media Center -->
+<aside class="lg:w-80 flex-shrink-0">
+<div class="sticky top-28 space-y-12">
+<!-- Media Center Card -->
+<div class="bg-surface-container p-8 rounded-xl border-none">
+<h4 class="text-xs font-bold tracking-[0.2em] text-tertiary uppercase mb-6">Media Center</h4>
+<p class="text-sm text-on-surface-variant mb-8 leading-relaxed">Resources and assets curated specifically for journalists and content creators.</p>
+<ul class="space-y-6">
+<li>
+<a class="flex items-center gap-4 group" href="#">
+<div class="w-10 h-10 rounded bg-white flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">brand_family</span>
+</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Brand Kit</p>
+<p class="text-[0.7rem] text-outline">Logos, colors, and type</p>
+</div>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-4 group" href="#">
+<div class="w-10 h-10 rounded bg-white flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">image</span>
+</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Image Gallery</p>
+<p class="text-[0.7rem] text-outline">High-res field photos</p>
+</div>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-4 group" href="#">
+<div class="w-10 h-10 rounded bg-white flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">contact_mail</span>
+</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Press Contact</p>
+<p class="text-[0.7rem] text-outline">Global media relations</p>
+</div>
+</a>
+</li>
+</ul>
+<button class="w-full mt-10 py-3 border-b-2 border-primary/20 hover:border-primary text-primary text-sm font-bold transition-all text-center">
+                                Request Interviews
+                            </button>
+</div>
+<!-- Newsletter Form -->
+<div class="p-8 bg-primary-container rounded-xl text-on-primary">
+<h4 class="text-xl font-extrabold mb-4 tracking-tight">The Archive Weekly</h4>
+<p class="text-sm text-on-primary-container leading-relaxed mb-6 opacity-90">Deep dives into the stories that matter most, delivered every Tuesday.</p>
+<form class="space-y-4">
+<input class="w-full bg-on-primary/10 border-none rounded-md px-4 py-3 text-white placeholder:text-on-primary-container/60 focus:ring-1 focus:ring-on-primary transition-all text-sm" placeholder="Your email address" type="email"/>
+<button class="w-full bg-on-primary text-primary font-bold py-3 rounded-md hover:bg-on-primary-container transition-colors text-sm">Subscribe</button>
+</form>
+<p class="text-[0.65rem] mt-4 text-on-primary-container opacity-50">By subscribing, you agree to our privacy policy and terms of service.</p>
+</div>
+</div>
+</aside>
+</div>
+</section>
+<!-- Asymmetric CTA Section -->
+<section class="mt-32 px-8 max-w-7xl mx-auto">
+<div class="relative bg-tertiary-container rounded-2xl overflow-hidden min-h-[400px] flex items-center">
+<div class="absolute inset-0 bg-gradient-to-r from-tertiary-container to-transparent z-10"></div>
+<img alt="Sustainability background" class="absolute inset-0 w-full h-full object-cover opacity-30" data-alt="Abstract macro shot of vibrant green leaves with dew drops, soft lighting, organic textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUJAIj5n4pU-7RqO4bFBu71zLTXX5QcNnlMzp9GkGHb8NTyRThkDKLVJeUcM8L2CCZ9Eb9bHX-hlrSFIPvun-2Cuz8bGO_r8hyXCYLiZc8onCbjJD0NcXwYSsDqtrBC8mH53melxvQDp2MYuTXyEd-v2d5SJXbSdC_c5rlcJ6UyxjBpOJv7BJ1F79oGru-BWxRJe8aaCQPzsf7ovGVnZBmTDdu4bcxUvP40p_BCZ63zxpPwNTmatgiyzCqWV0GHv_LvWxiSSu-dxNP"/>
+<div class="relative z-20 px-12 md:w-2/3 lg:w-1/2">
+<h2 class="text-[3rem] font-extrabold text-on-tertiary-container leading-[1.1] mb-6 tracking-tighter">Support the Human Experience.</h2>
+<p class="text-lg text-on-tertiary-container opacity-90 mb-10 leading-relaxed font-light">Join 50,000+ donors protecting the world's most vulnerable cultural archives and histories.</p>
+<div class="flex gap-4">
+<button class="bg-on-tertiary-container text-tertiary-container px-8 py-4 rounded-md font-bold text-sm">Become a Member</button>
+<button class="text-on-tertiary-container border-b-2 border-on-tertiary-container/30 hover:border-on-tertiary-container px-2 py-4 font-bold text-sm transition-all">Our 2024 Roadmap</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-950 mt-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-7xl mx-auto">
+<div class="space-y-4">
+<div class="text-xl font-bold text-emerald-950 dark:text-emerald-50">onewholefuture</div>
+<p class="text-sm font-work-sans leading-relaxed text-stone-500 dark:text-stone-400">Preserving the narrative of our collective humanity through editorial rigor and digital integrity.</p>
+</div>
+<div class="flex flex-col gap-3">
+<p class="text-emerald-900 dark:text-emerald-400 font-semibold mb-2">Explore</p>
+<a class="text-sm font-work-sans text-stone-500 dark:text-stone-400 hover:underline decoration-emerald-900/20 underline-offset-4 opacity-90 hover:opacity-100 transition-all" href="#">Latest Stories</a>
+<a class="text-sm font-work-sans text-stone-500 dark:text-stone-400 hover:underline decoration-emerald-900/20 underline-offset-4 opacity-90 hover:opacity-100 transition-all" href="#">Field Reports</a>
+<a class="text-sm font-work-sans text-stone-500 dark:text-stone-400 hover:underline decoration-emerald-900/20 underline-offset-4 opacity-90 hover:opacity-100 transition-all" href="#">The Archive Project</a>
+</div>
+<div class="flex flex-col gap-3">
+<p class="text-emerald-900 dark:text-emerald-400 font-semibold mb-2">Engage</p>
+<a class="text-sm font-work-sans text-stone-500 dark:text-stone-400 hover:underline decoration-emerald-900/20 underline-offset-4 opacity-90 hover:opacity-100 transition-all" href="#">Contact</a>
+<a class="text-sm font-work-sans text-stone-500 dark:text-stone-400 hover:underline decoration-emerald-900/20 underline-offset-4 opacity-90 hover:opacity-100 transition-all" href="#">Careers</a>
+<a class="text-sm font-work-sans text-stone-500 dark:text-stone-400 hover:underline decoration-emerald-900/20 underline-offset-4 opacity-90 hover:opacity-100 transition-all" href="#">Press Relations</a>
+</div>
+<div class="flex flex-col gap-3">
+<p class="text-emerald-900 dark:text-emerald-400 font-semibold mb-2">Legal</p>
+<a class="text-sm font-work-sans text-stone-500 dark:text-stone-400 hover:underline decoration-emerald-900/20 underline-offset-4 opacity-90 hover:opacity-100 transition-all" href="#">Privacy Policy</a>
+<a class="text-sm font-work-sans text-stone-500 dark:text-stone-400 hover:underline decoration-emerald-900/20 underline-offset-4 opacity-90 hover:opacity-100 transition-all" href="#">Terms of Service</a>
+<p class="mt-6 text-[0.7rem] text-stone-400">© 2024 onewholefuture. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>

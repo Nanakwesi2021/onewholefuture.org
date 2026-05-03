@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Portal | onewholefuture</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-primary-fixed-variant": "#2e4d44",
+                "tertiary-fixed": "#ffddb7",
+                "on-background": "#1a1c1b",
+                "on-tertiary-fixed": "#2a1700",
+                "secondary-fixed": "#d4e7df",
+                "on-primary-container": "#9bbdb1",
+                "inverse-surface": "#2f312f",
+                "secondary-container": "#d4e7df",
+                "primary": "#17362e",
+                "secondary": "#51625c",
+                "outline-variant": "#c1c8c4",
+                "surface": "#f9faf7",
+                "background": "#f9faf7",
+                "primary-container": "#2e4d44",
+                "on-primary": "#ffffff",
+                "on-secondary": "#ffffff",
+                "surface-container-lowest": "#ffffff",
+                "on-error": "#ffffff",
+                "surface-container-highest": "#e2e3e0",
+                "inverse-primary": "#accec2",
+                "surface-variant": "#e2e3e0",
+                "primary-fixed": "#c7eade",
+                "surface-bright": "#f9faf7",
+                "surface-dim": "#d9dad7",
+                "on-tertiary-container": "#d7ae7e",
+                "surface-container-high": "#e8e8e6",
+                "error-container": "#ffdad6",
+                "on-secondary-fixed": "#0f1e1a",
+                "surface-container": "#edeeeb",
+                "tertiary-container": "#5e411a",
+                "on-tertiary-fixed-variant": "#5e411a",
+                "on-primary-fixed": "#002019",
+                "on-tertiary": "#ffffff",
+                "error": "#ba1a1a",
+                "inverse-on-surface": "#f0f1ee",
+                "primary-fixed-dim": "#accec2",
+                "tertiary": "#442b06",
+                "secondary-fixed-dim": "#b8cbc3",
+                "surface-tint": "#45655b",
+                "tertiary-fixed-dim": "#e9bf8e",
+                "surface-container-low": "#f3f4f1",
+                "on-surface": "#1a1c1b",
+                "outline": "#717975",
+                "on-error-container": "#93000a",
+                "on-secondary-container": "#576862",
+                "on-surface-variant": "#414845",
+                "on-secondary-fixed-variant": "#3a4a45"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "fontFamily": {
+                "headline": ["Manrope"],
+                "body": ["Work Sans"],
+                "label": ["Work Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Work Sans', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/85 dark:bg-stone-900/85 backdrop-blur-xl shadow-[0_20px_40px_rgba(26,28,27,0.06)] flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold text-emerald-950 dark:text-emerald-50 tracking-tighter">onewholefuture</span>
+<div class="hidden md:flex gap-6 items-center font-manrope text-sm font-semibold tracking-tight">
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-emerald-300 transition-colors duration-300" href="#">About Us</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-emerald-300 transition-colors duration-300" href="#">Our Work</a>
+<a class="text-emerald-900 dark:text-emerald-400 border-b-2 border-emerald-900 dark:border-emerald-400 pb-1 transition-colors duration-300" href="#">Ideas</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-sm">search</span>
+<input class="bg-surface-container-highest rounded-full border-none text-sm pl-10 pr-4 py-2 focus:ring-1 focus:ring-primary/20 w-64" placeholder="Search applications..." type="text"/>
+</div>
+<button class="bg-primary text-on-primary font-headline text-sm font-semibold px-6 py-2.5 rounded-md hover:opacity-90 transition-all scale-98 active:opacity-80">Ways to Give</button>
+</div>
+</nav>
+<main class="pt-24 pb-20 px-6 md:px-12 max-w-7xl mx-auto space-y-12">
+<!-- Header & Analytics -->
+<header class="space-y-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<span class="text-[0.75rem] font-medium tracking-widest text-secondary uppercase font-label">Administrative Control</span>
+<h1 class="text-4xl md:text-5xl font-extrabold tracking-tighter text-primary mt-2">Program Applications</h1>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-container text-on-surface-variant rounded-md text-sm font-semibold hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+                        Filter Programs
+                    </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-secondary-container text-on-secondary-container rounded-md text-sm font-semibold hover:opacity-90 transition-all">
+<span class="material-symbols-outlined text-sm">download</span>
+                        Export CSV
+                    </button>
+</div>
+</div>
+<!-- Analytics Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="md:col-span-2 p-8 bg-surface-container-lowest rounded-xl flex flex-col justify-between relative overflow-hidden group">
+<div class="relative z-10">
+<p class="text-secondary font-label text-xs font-semibold uppercase tracking-wider">Total Signups</p>
+<h2 class="text-5xl font-extrabold text-primary mt-4 tracking-tighter">12,482</h2>
+<p class="text-emerald-700 text-sm font-medium mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_up</span> +14% from last cycle
+                        </p>
+</div>
+<div class="absolute right-0 bottom-0 w-32 h-32 opacity-5 group-hover:scale-110 transition-transform duration-700">
+<span class="material-symbols-outlined text-9xl">groups</span>
+</div>
+</div>
+<div class="p-8 bg-surface-container-low rounded-xl">
+<p class="text-secondary font-label text-xs font-semibold uppercase tracking-wider">Diversity Index</p>
+<div class="mt-6 space-y-4">
+<div class="flex items-center justify-between text-sm">
+<span class="text-on-surface-variant">Global South</span>
+<span class="font-bold text-primary">62%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[62%]"></div>
+</div>
+<div class="flex items-center justify-between text-sm">
+<span class="text-on-surface-variant">First Gen</span>
+<span class="font-bold text-primary">38%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[38%]"></div>
+</div>
+</div>
+</div>
+<div class="p-8 bg-primary-container text-on-primary-container rounded-xl flex flex-col justify-between">
+<div>
+<p class="font-label text-xs font-semibold uppercase tracking-wider opacity-80 text-on-primary">Decision Rate</p>
+<h2 class="text-4xl font-bold mt-2 tracking-tight">84%</h2>
+</div>
+<div class="mt-4 text-sm opacity-90 leading-relaxed">
+                        4,120 applications pending final review for the 2024 Fellowship.
+                    </div>
+</div>
+</div>
+</header>
+<!-- Main Dashboard Section -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+<!-- Applicants Table Container -->
+<div class="lg:col-span-2 space-y-6">
+<div class="flex items-center justify-between">
+<h3 class="text-xl font-bold text-primary tracking-tight">Active Applicants</h3>
+<div class="flex gap-2 text-xs font-semibold uppercase font-label">
+<button class="px-3 py-1 bg-primary text-on-primary rounded">All</button>
+<button class="px-3 py-1 text-secondary hover:text-primary">Pending</button>
+<button class="px-3 py-1 text-secondary hover:text-primary">Selected</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-secondary font-label text-[11px] uppercase tracking-widest">
+<th class="px-6 py-4 font-semibold">Applicant</th>
+<th class="px-6 py-4 font-semibold">Program Area</th>
+<th class="px-6 py-4 font-semibold">Status</th>
+<th class="px-6 py-4 font-semibold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<tr class="group hover:bg-surface-container-low transition-colors duration-200">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-stone-200 overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="professional portrait of a young woman with a warm smile and dark hair against a soft neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyDABMJFbilB18OW7J3YIpi3HvA8tmmBOZRodSIP52ZYJ-sI28Y0cUxRy-Mv_Fb6lGqvff-bhSAPaosatEVGm4tmImwHBK3yDd6Vy_6fLeRVnwbIIQ3zQwlvI0G1Wul6lvTjaeZ7Y5z2uuVbAalH8TXEQMsgLsrdxOtQm719KEmD6b5c_ZIX5gVkb-qwUCjmgDqPXQ-VsahceBkvR1NreatgMlEe9_tjUu7toSepJBfS505HXqpUHOw93K4aJPBvndxQL3E2nSam90"/>
+</div>
+<div>
+<p class="font-bold text-on-surface text-sm">Elena Rodriguez</p>
+<p class="text-xs text-secondary">San Salvador, SV</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-sm font-medium text-on-surface-variant">Urban Resilience</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800">Pending</span>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="text-primary font-bold text-xs uppercase tracking-widest hover:underline underline-offset-4">Review</button>
+</td>
+</tr>
+<tr class="group bg-surface-container-high/20 hover:bg-surface-container-low transition-colors duration-200">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-stone-200 overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of a thoughtful man with a short beard and glasses in soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9b57lSwjvK_ieaV3H54_uu7_h4xsTeeGdGDhG2VX0UF_6xgG9h2lHAAOigkumxK9wHylmUigV4TccrjfPlEbtNP9RvCSiEyaZ5BatWGEnuVj-rejFac5ZhLwlGVVpym1mW92XkqVdPJITVR8ykCeF5KLfVBeWkCHApxTn1oeoOgZXpyewJ8UAWFzhQoH5KJgeKDrXsDW5nu-YTAwraLIBx-N-Dnd_7g54od3t8F-r3jmfmOMuRSzvepu0FmDXMl9w9KZLV-wHYnHZ"/>
+</div>
+<div>
+<p class="font-bold text-on-surface text-sm">Marcus Chen</p>
+<p class="text-xs text-secondary">Toronto, CA</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-sm font-medium text-on-surface-variant">Digital Rights</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">Selected</span>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="text-primary font-bold text-xs uppercase tracking-widest hover:underline underline-offset-4">Review</button>
+</td>
+</tr>
+<tr class="group hover:bg-surface-container-low transition-colors duration-200">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-stone-200 overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="portrait of a confident woman with curly hair looking directly at the camera in professional studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2nkY8ZdlBDDNrlzz7hOLTnBB1NAT62lc1RqVXVEInpRcKO-lbUkeyprNuSMk2RSCfGxfVLiVHz54zWbVrjv79WFAAvF3voCTg3dU-OmLwfHM_p3ZaOSOEnJ_fA0jyDLoV9yUvsXMtLR68n-K9ACVLKUo-FWWYsJq5OrxkCIAbpdiI3GQ1pbk06CPMJ1H0vJh637JSfOR0VtkMduwlRYhmgOH-QN-E0D5h3080deHFmxDNzNYSypji4s5QNPI5glpfW-mvIbYmHrUO"/>
+</div>
+<div>
+<p class="font-bold text-on-surface text-sm">Amara Okafor</p>
+<p class="text-xs text-secondary">Lagos, NG</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-sm font-medium text-on-surface-variant">Climate Justice</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-stone-100 text-stone-600">Rejected</span>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="text-primary font-bold text-xs uppercase tracking-widest hover:underline underline-offset-4">Review</button>
+</td>
+</tr>
+<tr class="group hover:bg-surface-container-low transition-colors duration-200">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-stone-200 overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="close-up of a smiling young man in a clean white shirt against a bright airy window background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYoiNGX1pn5ruHqC2LMyLH6utQo2pnK0pP7YvXK0fqkmFDP_uDSOlwPg_El_XRy837sZlXdHZ6zhtNtUn4Eszjyhz5spFQ4OdYnFNq9BskixlUwSWMo3OMP3_yntFXJ2JwDtNXkM1TVtEmfxr3yZiSjkxNDdhjmbLwzzSfW6AdNHd_vgej87yPsi-ZIXuLKUV87n4O3Cjen0Cuji3PHKhWWOTgs4Ky19WAvpdQ9p1cYmn2B3SNJkZ499lb5n6NLjUvTeNH8YptNLGY"/>
+</div>
+<div>
+<p class="font-bold text-on-surface text-sm">Julian Voss</p>
+<p class="text-xs text-secondary">Berlin, DE</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-sm font-medium text-on-surface-variant">Urban Resilience</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800">Pending</span>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="text-primary font-bold text-xs uppercase tracking-widest hover:underline underline-offset-4">Review</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Review View Side Panel -->
+<div class="space-y-6 lg:sticky lg:top-24">
+<h3 class="text-xl font-bold text-primary tracking-tight">Reviewing: Elena Rodriguez</h3>
+<div class="bg-surface-container p-8 rounded-xl shadow-[0_20px_40px_rgba(26,28,27,0.04)] space-y-8">
+<div class="aspect-[4/3] w-full rounded-lg overflow-hidden relative group">
+<img class="w-full h-full object-cover" data-alt="collaborative team meeting in a bright modern office with glass walls and professional atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJL_xQqJDsNbxnitaoE4fHxxDVf9DoNtPGVHaRCf1zau5xnzPjk3ejkgT5AAfuWTGJU1n_TmRl7rer6Pk9HhMxMsLw_V1pabeZojqfCfge0SCwvd8FJkHGO7TYLBWHH6O257zcNApBUAicCiQFTZma7Hx9n3zXqKgtCuAQ2k0RB9UQiiocVA6q6QTc8QzauktP5YHamVm9qVtjmpQ6-4BAgk92CLcNiFb4B1Pbwm8_RHx3Ck1bryo-fkRv4HecAGkM01eDcQi-b4iq"/>
+<div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+</div>
+<div class="space-y-4">
+<div class="space-y-1">
+<p class="text-[10px] font-bold uppercase tracking-widest text-secondary font-label">Personal Statement</p>
+<p class="text-sm text-on-surface leading-relaxed italic">"My work focuses on mapping informal settlements in San Salvador to advocate for better public utility access. I believe spatial data is the first step toward dignity."</p>
+</div>
+<div class="grid grid-cols-2 gap-4 pt-4 border-t border-outline-variant/20">
+<div>
+<p class="text-[10px] font-bold uppercase tracking-widest text-secondary font-label">Experience</p>
+<p class="text-sm font-semibold text-primary">6 Years</p>
+</div>
+<div>
+<p class="text-[10px] font-bold uppercase tracking-widest text-secondary font-label">Ref. Score</p>
+<p class="text-sm font-semibold text-primary">4.9 / 5.0</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3 pt-4">
+<button class="w-full bg-primary text-on-primary font-headline font-bold py-3 rounded-md hover:bg-primary/95 transition-all shadow-lg shadow-primary/10">
+                            Select Applicant
+                        </button>
+<button class="w-full bg-surface-container-highest text-on-surface font-headline font-bold py-3 rounded-md hover:bg-stone-200 transition-all">
+                            Decline Application
+                        </button>
+</div>
+</div>
+<div class="p-6 bg-tertiary-fixed text-on-tertiary-fixed rounded-xl flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary">priority_high</span>
+<div>
+<p class="text-xs font-bold uppercase tracking-wider font-label">Administrative Note</p>
+<p class="text-sm mt-1 font-medium">This application matches 95% of the priority criteria for the Urban Resilience cohort.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-950 w-full rounded-t-none">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-7xl mx-auto font-work-sans text-sm leading-relaxed">
+<div class="col-span-1 md:col-span-2 space-y-6">
+<span class="text-xl font-bold text-emerald-950 dark:text-emerald-50">onewholefuture</span>
+<p class="max-w-md text-stone-500 dark:text-stone-400">An editorial space dedicated to the preservation of human narrative and the pursuit of radical empathy through documented work.</p>
+<p class="text-stone-500 dark:text-stone-400">© 2024 onewholefuture. All rights reserved.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-emerald-900 dark:text-emerald-500 font-headline uppercase tracking-widest text-xs">Resources</h4>
+<ul class="space-y-2 text-stone-500 dark:text-stone-400">
+<li><a class="hover:underline decoration-emerald-900/20 underline-offset-4 transition-opacity opacity-90 hover:opacity-100" href="#">Contact</a></li>
+<li><a class="hover:underline decoration-emerald-900/20 underline-offset-4 transition-opacity opacity-90 hover:opacity-100" href="#">Careers</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-emerald-900 dark:text-emerald-500 font-headline uppercase tracking-widest text-xs">Legal</h4>
+<ul class="space-y-2 text-stone-500 dark:text-stone-400">
+<li><a class="hover:underline decoration-emerald-900/20 underline-offset-4 transition-opacity opacity-90 hover:opacity-100" href="#">Privacy Policy</a></li>
+<li><a class="hover:underline decoration-emerald-900/20 underline-offset-4 transition-opacity opacity-90 hover:opacity-100" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>
