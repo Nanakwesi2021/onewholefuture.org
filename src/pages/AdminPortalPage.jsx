@@ -15,7 +15,7 @@ const StatSkeleton = memo(() => (
 
 const TableRowSkeleton = memo(() => (
   <tr className="animate-pulse">
-    <td className="px-8 py-6">
+    <td className="px-6 py-4">
       <div className="flex items-center gap-4">
         <div className="w-12 h-12 rounded-2xl skeleton"></div>
         <div className="space-y-2">
@@ -24,9 +24,9 @@ const TableRowSkeleton = memo(() => (
         </div>
       </div>
     </td>
-    <td className="px-8 py-6"><div className="w-20 h-3 skeleton rounded-full"></div></td>
-    <td className="px-8 py-6"><div className="w-16 h-5 skeleton rounded-full"></div></td>
-    <td className="px-8 py-6 text-right"><div className="w-8 h-8 rounded-full skeleton ml-auto"></div></td>
+    <td className="px-6 py-4"><div className="w-20 h-3 skeleton rounded-full"></div></td>
+    <td className="px-6 py-4"><div className="w-16 h-5 skeleton rounded-full"></div></td>
+    <td className="px-6 py-4 text-right"><div className="w-8 h-8 rounded-full skeleton ml-auto"></div></td>
   </tr>
 ));
 
@@ -366,7 +366,7 @@ const AdminPortalPage = () => {
 
       {/* Main Content Area */}
       <main className="flex-1 lg:ml-72 min-h-screen p-6 md:p-12 transition-all duration-500">
-        <div className="max-w-6xl mx-auto space-y-12">
+        <div className="max-w-7xl mx-auto space-y-12">
           {adminView === 'applications' ? (
             <div className="space-y-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
               {/* Header & Stats */}
@@ -451,7 +451,7 @@ const AdminPortalPage = () => {
               </header>
 
               {/* Main Interaction Area */}
-              <div className="grid grid-cols-1 xl:grid-cols-12 gap-12 items-start">
+              <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 items-start">
                 {/* Table Section */}
                 <div className="xl:col-span-7 space-y-6">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 px-2">
@@ -484,10 +484,10 @@ const AdminPortalPage = () => {
                       <table className="w-full text-left border-collapse">
                         <thead>
                           <tr className="bg-surface-container-lowest text-secondary font-label text-[10px] uppercase tracking-[0.2em]">
-                            <th className="px-8 py-6 font-bold">Profile</th>
-                            <th className="px-8 py-6 font-bold">Program</th>
-                            <th className="px-8 py-6 font-bold">Status</th>
-                            <th className="px-8 py-6 font-bold text-right">View</th>
+                            <th className="px-6 py-5 font-bold">Profile</th>
+                            <th className="px-6 py-5 font-bold">Program</th>
+                            <th className="px-6 py-5 font-bold">Status</th>
+                            <th className="px-6 py-5 font-bold text-right">View</th>
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-surface-container-low">
@@ -507,26 +507,26 @@ const AdminPortalPage = () => {
                                 style={{ animationDelay: `${index * 50}ms` }}
                                 className={`group cursor-pointer transition-all duration-500 hover:bg-surface-container-low animate-in fade-in slide-in-from-left-4 ${selectedApplicant?.id === applicant.id ? 'bg-surface-container-low' : ''}`}
                               >
-                                <td className="px-8 py-6">
+                                <td className="px-6 py-4">
                                   <div className="flex items-center gap-4">
                                     <div className={`w-12 h-12 rounded-2xl flex items-center justify-center text-lg font-bold transition-all duration-500 group-hover:rotate-12 ${selectedApplicant?.id === applicant.id ? 'bg-primary text-on-primary' : 'bg-secondary-fixed/50 text-on-secondary-fixed'}`}>
                                       {applicant.fullName.charAt(0)}
                                     </div>
-                                    <div>
-                                      <p className="font-bold text-on-surface text-sm tracking-tight">{applicant.fullName}</p>
-                                      <p className="text-[10px] text-secondary font-medium tracking-wide font-label uppercase">{applicant.email}</p>
+                                    <div className="min-w-0">
+                                      <p className="font-bold text-on-surface text-sm tracking-tight truncate max-w-[120px] sm:max-w-[150px]" title={applicant.fullName}>{applicant.fullName}</p>
+                                      <p className="text-[10px] text-secondary font-medium tracking-wide font-label uppercase truncate max-w-[120px] sm:max-w-[150px]" title={applicant.email}>{applicant.email}</p>
                                     </div>
                                   </div>
                                 </td>
-                                <td className="px-8 py-6">
-                                  <span className="text-xs font-bold text-secondary uppercase tracking-wider">{applicant.program}</span>
+                                <td className="px-6 py-4">
+                                  <span className="text-xs font-bold text-secondary uppercase tracking-wider block truncate max-w-[120px] sm:max-w-[160px]" title={applicant.program}>{applicant.program}</span>
                                 </td>
-                                <td className="px-8 py-6">
+                                <td className="px-6 py-4">
                                   <span className={`inline-flex items-center px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-sm ${getStatusClasses(applicant.status)}`}>
                                     {applicant.status}
                                   </span>
                                 </td>
-                                <td className="px-8 py-6 text-right">
+                                <td className="px-6 py-4 text-right">
                                   <div className={`w-8 h-8 rounded-full flex items-center justify-center ml-auto transition-all duration-500 ${selectedApplicant?.id === applicant.id ? 'bg-primary text-white rotate-90 shadow-lg' : 'bg-surface-container group-hover:bg-primary group-hover:text-white'}`}>
                                     <span className="material-symbols-outlined text-sm font-bold">arrow_forward_ios</span>
                                   </div>
