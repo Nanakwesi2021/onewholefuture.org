@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const HERO_BG = '/image/julianna-corbett-R3IYAFLDX0I-unsplash (1).jpg'; // Community youth
 const MISSION_IMG = '/image/damian-patkowski-T-LfvX-7IVg-unsplash.jpg'; // Collaborative engagement
-const ORIGIN_IMG = '/image/kojo-nana-GtnFtsPXKME-unsplash.jpg'; // Representative local scene
+const ORIGIN_IMG = '/image/founder.png'; // Founder image
 
 const AboutUsPage = () => {
 
@@ -272,28 +272,52 @@ const AboutUsPage = () => {
       </section>
 
       {/* ORIGIN STORY */}
-      <section className="py-32 px-8">
+      <section className="py-24 px-8 bg-surface-container-low/30">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div className="order-2 lg:order-1">
-              <img src={ORIGIN_IMG} alt="Akosua Asaa Manu" className="rounded-3xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000" />
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
+            {/* Image Column */}
+            <div className="lg:col-span-5 order-2 lg:order-1 relative">
+              {/* Offset Decorative Background Card */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-secondary/20 to-tertiary/20 rounded-[2.5rem] transform -translate-x-4 translate-y-4 -z-10"></div>
+              
+              {/* Main Image */}
+              <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl border border-outline-variant/30 bg-white">
+                <img 
+                  src={ORIGIN_IMG} 
+                  alt="Akosua Asaa Manu" 
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" 
+                />
+              </div>
+
+              {/* Floating Glassmorphic Label Card */}
+              <div className="absolute -bottom-6 right-6 lg:-right-6 bg-white/90 backdrop-blur-xl border border-white/40 p-6 rounded-2xl shadow-2xl max-w-[240px] transform hover:-translate-y-1 transition-transform">
+                <h4 className="font-headline font-black text-primary text-base leading-tight">Akosua Asaa Manu</h4>
+                <p className="font-label text-[10px] text-secondary font-bold uppercase tracking-widest mt-1">Founder & Visionary</p>
+              </div>
             </div>
-            <div className="order-1 lg:order-2">
-              <span className="font-label text-xs uppercase tracking-[0.3em] text-primary font-bold mb-6 block">Our Origin</span>
-              <h2 className="font-headline text-4xl lg:text-5xl font-extrabold text-primary tracking-tighter mb-8 leading-tight">
-                Founded on a conviction about where change really begins.
-              </h2>
-              <p className="font-body text-lg text-on-surface-variant leading-relaxed mb-8">
+
+            {/* Content Column */}
+            <div className="lg:col-span-7 order-1 lg:order-2 space-y-8">
+              <div className="space-y-4">
+                <span className="font-label text-xs uppercase tracking-[0.3em] text-secondary font-bold bg-secondary-container/50 px-4 py-1.5 rounded-full inline-block">Our Origin</span>
+                <h2 className="font-headline text-4xl lg:text-5xl font-black text-primary tracking-tighter leading-tight">
+                  Founded on a conviction about where change really begins.
+                </h2>
+              </div>
+              
+              <p className="font-body text-lg text-on-surface-variant leading-relaxed font-light">
                 Communications professional and entrepreneur Akosua Asaa Manu founded One Whole Future Foundation on the belief that lasting national transformation begins in communities powered by the people closest to the problem.
               </p>
-              <div className="flex gap-12">
-                <div>
-                  <span className="block font-headline text-3xl font-bold text-primary">Accra</span>
-                  <span className="font-label text-xs text-outline uppercase tracking-widest">Base</span>
+
+              {/* Stats / Info Grid */}
+              <div className="grid grid-cols-2 gap-6 pt-4 max-w-sm">
+                <div className="bg-white p-5 rounded-2xl border border-outline-variant/20 shadow-sm hover:shadow-md transition-shadow">
+                  <span className="block font-headline text-3xl font-black text-primary">Accra</span>
+                  <span className="font-label text-[10px] text-on-surface-variant/60 font-bold uppercase tracking-widest mt-1 block">Global HQ</span>
                 </div>
-                <div>
-                  <span className="block font-headline text-3xl font-bold text-primary">2026</span>
-                  <span className="font-label text-xs text-outline uppercase tracking-widest">Est.</span>
+                <div className="bg-white p-5 rounded-2xl border border-outline-variant/20 shadow-sm hover:shadow-md transition-shadow">
+                  <span className="block font-headline text-3xl font-black text-primary">2026</span>
+                  <span className="font-label text-[10px] text-on-surface-variant/60 font-bold uppercase tracking-widest mt-1 block">Established</span>
                 </div>
               </div>
             </div>

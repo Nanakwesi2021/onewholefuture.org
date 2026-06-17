@@ -5,6 +5,29 @@ import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp } from 
 
 const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1504711432869-0df305860f4c?auto=format&fit=crop&q=80&w=1000';
 
+const MOCK_ARTICLES = [
+  {
+    id: 'mock-news-1',
+    title: 'Transforming Healthcare Delivery in Ghana: The 2026 Fellowship',
+    category: 'Impact',
+    description: 'A summary of the achievements and local community impact made by our 2026 Health Tech Fellowship cohort.',
+    content: 'We are proud to announce the successful deployment of five digital health systems in rural clinics, serving over 10,000 residents across three districts.',
+    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=85&w=800',
+    featured: true,
+    createdAt: { toDate: () => new Date('2026-06-14T11:00:00Z') }
+  },
+  {
+    id: 'mock-news-2',
+    title: 'Climate Resilience Lab Receives Strategic Funding Expansion',
+    category: 'Technology',
+    description: 'A new multi-year partnership enables expansion of climate-adaptive agricultural monitoring tech.',
+    content: 'Through our collaboration with international climate agencies, we are deploying 200 micro-weather stations to support smallholder farmers.',
+    image: 'https://images.unsplash.com/photo-1530631676643-0552cf58800e?auto=format&fit=crop&q=85&w=800',
+    featured: false,
+    createdAt: { toDate: () => new Date('2026-06-11T13:20:00Z') }
+  }
+];
+
 const NewsPortalPage = () => {
   const [activeCategory, setActiveCategory] = useState('All');
   const [articles, setArticles] = useState([]);
@@ -16,14 +39,21 @@ const NewsPortalPage = () => {
 
   useEffect(() => {
     const q = query(collection(db, 'news'), orderBy('createdAt', 'desc'));
-    const unsubscribe = onSnapshot(q, (snapshot) => {
-      const newsData = snapshot.docs.map(doc => ({
-        id: doc.id,
-        ...doc.data()
-      }));
-      setArticles(newsData);
-      setLoading(false);
-    });
+    const unsubscribe = onSnapshot(q, 
+      (snapshot) => {
+        const newsData = snapshot.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data()
+        }));
+        setArticles(newsData);
+        setLoading(false);
+      },
+      (error) => {
+        console.error("Firestore news subscription error. Using local mock data:", error);
+        setArticles(MOCK_ARTICLES);
+        setLoading(false);
+      }
+    );
 
     return () => {
       unsubscribe();

@@ -44,11 +44,11 @@ const NewsArticlePage = () => {
 
   if (!article) return null;
 
-  const formattedDate = article.createdAt?.toDate().toLocaleDateString('en-GB', { 
-    day: '2-digit', 
-    month: 'long', 
-    year: 'numeric' 
-  }) || 'Recently';
+  const formattedDate = article.createdAt?.toDate 
+    ? article.createdAt.toDate().toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' })
+    : article.createdAt instanceof Date 
+      ? article.createdAt.toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' })
+      : 'Recently';
 
   return (
     <div className="bg-surface min-h-screen pb-32">

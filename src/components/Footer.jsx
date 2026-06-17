@@ -2,87 +2,125 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  const year = new Date().getFullYear();
+
   return (
-    <footer className="bg-stone-950 text-white w-full rounded-t-none mt-auto py-24">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-16 px-12 max-w-[1600px] mx-auto">
-        <div className="md:col-span-1">
-          <div className="text-3xl font-extrabold font-headline mb-8 tracking-tighter flex items-center">
-            <span style={{ color: '#006838' }}>onewhole</span>
-            <span style={{ color: '#fbb040' }}>future</span>
-          </div>
-          <p className="font-body text-sm leading-relaxed text-stone-400 mb-8 max-w-xs opacity-80">
-            Designing systems for human flourishing. We invest in the fundamental infrastructure of dignity through sustainable action.
+    <footer className="bg-stone-950 text-white w-full mt-auto">
+      {/* Main Footer Grid */}
+      <div className="max-w-[1440px] mx-auto px-8 md:px-12 pt-16 pb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+
+        {/* Brand Column */}
+        <div className="lg:col-span-1">
+          <Link to="/" className="flex items-center gap-2.5 mb-5 group">
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-primary to-secondary flex items-center justify-center shadow-lg flex-shrink-0">
+              <span className="material-symbols-outlined text-white text-[1.2rem]">eco</span>
+            </div>
+            <div className="leading-none">
+              <span className="block font-headline font-black text-white text-base tracking-tight">One Whole Future</span>
+              <span className="block text-[0.5rem] uppercase tracking-[0.35em] text-stone-500 font-bold mt-0.5">Foundation</span>
+            </div>
+          </Link>
+          <p className="font-body text-sm leading-relaxed text-stone-400 mb-6 max-w-xs">
+            Identifying, equipping, and deploying the next generation of Ghanaian community changemakers. Local impact. Shared future.
           </p>
-          <div className="flex gap-4">
-            <a className="w-10 h-10 rounded-full bg-stone-900 flex items-center justify-center text-stone-400 hover:text-primary transition-all duration-300" href="#">
-              <span className="material-symbols-outlined text-lg">public</span>
-            </a>
-            <a className="w-10 h-10 rounded-full bg-stone-900 flex items-center justify-center text-stone-400 hover:text-primary transition-all duration-300" href="#">
-              <span className="material-symbols-outlined text-lg">share</span>
-            </a>
-            <a className="w-10 h-10 rounded-full bg-stone-900 flex items-center justify-center text-stone-400 hover:text-primary transition-all duration-300" href="#">
-              <span className="material-symbols-outlined text-lg">rss_feed</span>
-            </a>
+          <div className="flex gap-3">
+            {[
+              { icon: 'language', label: 'Website', href: '#' },
+              { icon: 'share', label: 'Social', href: '#' },
+              { icon: 'rss_feed', label: 'RSS', href: '#' }
+            ].map(({ icon, label, href }) => (
+              <a
+                key={label}
+                href={href}
+                aria-label={label}
+                className="w-9 h-9 rounded-xl bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-400 hover:text-secondary hover:border-secondary/40 hover:bg-stone-800 transition-all duration-300"
+              >
+                <span className="material-symbols-outlined text-base">{icon}</span>
+              </a>
+            ))}
           </div>
         </div>
-        
+
+        {/* Navigation */}
         <div>
-          <h5 className="font-headline font-bold text-white mb-8 uppercase text-[0.6rem] tracking-[0.25em]">Navigation</h5>
-          <ul className="space-y-4 font-body text-sm">
-            <li><Link className="text-stone-400 hover:text-white transition-colors" to="/about">About Us</Link></li>
-            <li><Link className="text-stone-400 hover:text-white transition-colors" to="/our-work">Our Work</Link></li>
-            <li><Link className="text-stone-400 hover:text-white transition-colors" to="/leadership">Leadership</Link></li>
-            <li><Link className="text-stone-400 hover:text-white transition-colors" to="/careers">Careers</Link></li>
+          <h5 className="font-headline font-bold text-white mb-5 uppercase text-[0.6rem] tracking-[0.3em]">Navigate</h5>
+          <ul className="space-y-3 font-body text-sm">
+            {[
+              { label: 'About Us', to: '/about' },
+              { label: 'Our Programs', to: '/our-work' },
+              { label: 'Leadership', to: '/leadership' },
+              { label: 'News & Ideas', to: '/news' },
+              { label: 'Media Center', to: '/media' },
+              { label: 'Careers', to: '/careers' }
+            ].map(({ label, to }) => (
+              <li key={label}>
+                <Link className="text-stone-400 hover:text-white hover:translate-x-1 inline-flex items-center gap-1 transition-all duration-200" to={to}>
+                  {label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
+        {/* Legal & Trust */}
         <div>
-          <h5 className="font-headline font-bold text-white mb-8 uppercase text-[0.6rem] tracking-[0.25em]">Legal & Trust</h5>
-          <ul className="space-y-4 font-body text-sm">
-            <li><a className="text-stone-400 hover:text-white transition-colors" href="#">Privacy Policy</a></li>
-            <li><a className="text-stone-400 hover:text-white transition-colors" href="#">Terms of Service</a></li>
-            <li><a className="text-stone-400 hover:text-white transition-colors" href="#">Transparency</a></li>
-            <li><a className="text-stone-400 hover:text-white transition-colors" href="#">Donor Rights</a></li>
+          <h5 className="font-headline font-bold text-white mb-5 uppercase text-[0.6rem] tracking-[0.3em]">Legal & Trust</h5>
+          <ul className="space-y-3 font-body text-sm">
+            {[
+              { label: 'Privacy Policy', href: '#' },
+              { label: 'Terms of Service', href: '#' },
+              { label: 'Transparency', href: '#' },
+              { label: 'Donor Rights', href: '#' },
+              { label: 'Foundation FAQ', to: '/faq' }
+            ].map(({ label, href, to }) => (
+              <li key={label}>
+                {to ? (
+                  <Link className="text-stone-400 hover:text-white transition-colors" to={to}>{label}</Link>
+                ) : (
+                  <a className="text-stone-400 hover:text-white transition-colors" href={href}>{label}</a>
+                )}
+              </li>
+            ))}
           </ul>
         </div>
 
+        {/* Get Involved */}
         <div>
-          <h5 className="font-headline font-bold text-white mb-8 uppercase text-[0.6rem] tracking-[0.25em]">Regional Hubs</h5>
-          <ul className="space-y-4 font-body text-sm text-stone-400">
-            <li className="flex gap-3 items-start group">
-              <span className="material-symbols-outlined text-primary text-lg group-hover:scale-110 transition-transform" style={{ color: '#006838' }}>location_on</span>
-              <div>
-                <span className="block text-white font-bold text-xs uppercase tracking-widest mb-1">Accra</span>
-                <span className="opacity-60">12 Independence Ave</span>
-              </div>
-            </li>
-            <li className="flex gap-3 items-start group">
-              <span className="material-symbols-outlined text-primary text-lg group-hover:scale-110 transition-transform" style={{ color: '#006838' }}>location_on</span>
-              <div>
-                <span className="block text-white font-bold text-xs uppercase tracking-widest mb-1">Kumasi</span>
-                <span className="opacity-60">Garden City Plaza</span>
-              </div>
-            </li>
-            <li className="flex gap-3 items-start group">
-              <span className="material-symbols-outlined text-primary text-lg group-hover:scale-110 transition-transform" style={{ color: '#006838' }}>location_on</span>
-              <div>
-                <span className="block text-white font-bold text-xs uppercase tracking-widest mb-1">Tamale</span>
-                <span className="opacity-60">Savannah Hub Central</span>
-              </div>
-            </li>
+          <h5 className="font-headline font-bold text-white mb-5 uppercase text-[0.6rem] tracking-[0.3em]">Get Involved</h5>
+          <ul className="space-y-3 font-body text-sm mb-6">
+            {[
+              { label: 'Join the Challenge', to: '/signup' },
+              { label: 'Ways to Give', to: '/support' },
+              { label: 'Volunteer', to: '/volunteers' },
+              { label: 'Partner With Us', to: '/contact' },
+              { label: 'Offices', to: '/offices' }
+            ].map(({ label, to }) => (
+              <li key={label}>
+                <Link className="text-stone-400 hover:text-white transition-colors" to={to}>{label}</Link>
+              </li>
+            ))}
           </ul>
+          <Link
+            to="/support"
+            className="inline-block bg-secondary text-white text-[0.65rem] font-black uppercase tracking-widest px-5 py-2.5 rounded-lg hover:bg-secondary/90 transition-all shadow-md shadow-secondary/20"
+          >
+            Support Our Mission
+          </Link>
         </div>
       </div>
 
-      <div className="max-w-[1600px] mx-auto px-12 py-10 mt-20 border-t border-stone-900 flex flex-col md:flex-row justify-between items-center gap-6">
-        <span className="font-body text-xs text-stone-600 tracking-wide uppercase font-bold">© 2026 onewholefuture. Local Impact, Global Shared Future.</span>
-        <div className="flex items-center gap-6">
-          <div className="flex items-center gap-2 font-bold text-xs uppercase tracking-widest" style={{ color: '#006838' }}>
-            <span className="material-symbols-outlined text-lg">verified_user</span>
-            <span>Certified Member</span>
+      {/* Bottom Bar */}
+      <div className="max-w-[1440px] mx-auto px-8 md:px-12 py-5 border-t border-stone-900 flex flex-col md:flex-row justify-between items-center gap-4">
+        <span className="font-body text-xs text-stone-600 tracking-wide">
+          © {year} One Whole Future Foundation · Accra, Ghana · All rights reserved
+        </span>
+        <div className="flex items-center gap-5">
+          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-secondary">
+            <span className="material-symbols-outlined text-base">verified_user</span>
+            <span>SDG Aligned</span>
           </div>
-          <div className="w-[1px] h-4 bg-stone-800 hidden md:block" />
-          <span className="text-[0.65rem] text-stone-500 font-bold uppercase tracking-[0.2em]">Accra, Ghana</span>
+          <div className="w-px h-4 bg-stone-800 hidden md:block" />
+          <span className="text-[0.6rem] text-stone-600 font-bold uppercase tracking-[0.2em]">Est. 2026</span>
         </div>
       </div>
     </footer>

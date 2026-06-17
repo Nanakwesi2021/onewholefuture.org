@@ -185,4 +185,8 @@
     background-size: 200% 100%;
     animation: shimmer 2s infinite linear;
   }
+
+  .animate-fadeSlideUp {
+    animation: fadeSlideUp 0.8s ease forwards;
+  }
 }

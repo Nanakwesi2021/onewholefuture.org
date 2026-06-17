@@ -69,25 +69,30 @@ const OurWorkPage = () => {
   return (
     <div className="bg-surface min-h-screen">
       {/* Cinematic Hero */}
-      <header className="relative h-[85vh] flex items-center overflow-hidden bg-surface" id="impact">
-        <div className="absolute inset-0 z-0">
+      <header className="relative min-h-[80vh] flex items-center overflow-hidden bg-surface-container-low" id="impact">
+        {/* Background Image with Zoom */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
           <img
             src="/image/apex-360-Wt2unQdiJb4-unsplash.jpg"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover hero-img-ken-burns scale-110"
             alt="Impact Strategy"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-surface/80 via-surface/30 to-transparent" />
+          <div className="absolute inset-0 bg-primary/20 backdrop-blur-[1px]" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-8 w-full pt-20">
-          <span className="uppercase tracking-[0.4em] text-[0.8rem] font-black text-primary/60 mb-6 block animate-fadeSlideUp">Impact Strategy</span>
-          <h1 className="font-headline text-[5rem] lg:text-[8.5rem] leading-[0.85] font-black tracking-tighter text-primary mb-10 animate-fadeSlideUp">
-            Areas of <br />
-            <span className="italic font-light text-secondary">Impact.</span>
-          </h1>
-          <p className="text-xl lg:text-2xl text-on-surface max-w-2xl font-bold leading-relaxed animate-fadeSlideUp delay-100">
-            We operate across seven key sectors, using a systemic approach to drive progress and preserve human sovereignty.
-          </p>
+        {/* Floating Glass Content Card */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 w-full pt-28 pb-16">
+          <div className="max-w-2xl bg-white/90 backdrop-blur-xl border border-white/50 p-8 md:p-14 rounded-[2.5rem] shadow-[0_30px_80px_rgba(0,0,0,0.15)] animate-fadeSlideUp">
+            <span className="uppercase tracking-[0.3em] text-[10px] font-black text-secondary mb-4 block">Impact Strategy</span>
+            <h1 className="font-headline text-5xl lg:text-7xl font-black tracking-tighter text-primary mb-6 leading-[0.95]">
+              Areas of <br />
+              <span className="italic font-light text-secondary">Impact.</span>
+            </h1>
+            <div className="h-[2px] w-16 bg-tertiary mb-6"></div>
+            <p className="text-base md:text-lg text-on-surface-variant leading-relaxed font-light">
+              We operate across seven key sectors, using a systemic approach to drive progress and preserve human sovereignty.
+            </p>
+          </div>
         </div>
       </header>
 
