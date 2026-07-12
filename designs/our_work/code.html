@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#2e4d44",
+                    "tertiary-fixed": "#ffddb7",
+                    "on-background": "#1a1c1b",
+                    "on-tertiary-fixed": "#2a1700",
+                    "secondary-fixed": "#d4e7df",
+                    "on-primary-container": "#9bbdb1",
+                    "inverse-surface": "#2f312f",
+                    "secondary-container": "#d4e7df",
+                    "primary": "#17362e",
+                    "secondary": "#51625c",
+                    "outline-variant": "#c1c8c4",
+                    "surface": "#f9faf7",
+                    "background": "#f9faf7",
+                    "primary-container": "#2e4d44",
+                    "on-primary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e2e3e0",
+                    "inverse-primary": "#accec2",
+                    "surface-variant": "#e2e3e0",
+                    "primary-fixed": "#c7eade",
+                    "surface-bright": "#f9faf7",
+                    "surface-dim": "#d9dad7",
+                    "on-tertiary-container": "#d7ae7e",
+                    "surface-container-high": "#e8e8e6",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed": "#0f1e1a",
+                    "surface-container": "#edeeeb",
+                    "tertiary-container": "#5e411a",
+                    "on-tertiary-fixed-variant": "#5e411a",
+                    "on-primary-fixed": "#002019",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "inverse-on-surface": "#f0f1ee",
+                    "primary-fixed-dim": "#accec2",
+                    "tertiary": "#442b06",
+                    "secondary-fixed-dim": "#b8cbc3",
+                    "surface-tint": "#45655b",
+                    "tertiary-fixed-dim": "#e9bf8e",
+                    "surface-container-low": "#f3f4f1",
+                    "on-surface": "#1a1c1b",
+                    "outline": "#717975",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#576862",
+                    "on-surface-variant": "#414845",
+                    "on-secondary-fixed-variant": "#3a4a45"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Work Sans"],
+                    "label": ["Work Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(24px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/85 dark:bg-stone-900/85 backdrop-blur-xl shadow-[0_20px_40px_rgba(26,28,27,0.06)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="text-2xl font-bold text-emerald-950 dark:text-emerald-50 tracking-tighter font-headline">
+                onewholefuture
+            </div>
+<div class="hidden md:flex items-center space-x-8 font-manrope text-sm font-semibold tracking-tight">
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-emerald-300 transition-colors duration-300" href="#">About Us</a>
+<a class="text-emerald-900 dark:text-emerald-400 border-b-2 border-emerald-900 dark:border-emerald-400 pb-1 hover:text-emerald-800 dark:hover:text-emerald-300 transition-colors duration-300" href="#">Our Work</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-emerald-300 transition-colors duration-300" href="#">Ideas</a>
+</div>
+<div class="flex items-center space-x-6">
+<div class="hidden lg:flex items-center bg-surface-container-low px-4 py-2 rounded-full">
+<span class="material-symbols-outlined text-outline text-sm mr-2">search</span>
+<span class="text-stone-400 text-sm">Search the archive...</span>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-md text-sm font-semibold scale-98 active:opacity-80 transition-all">
+                    Ways to Give
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24">
+<!-- Hero Section: High Contrast Editorial -->
+<header class="max-w-7xl mx-auto px-8 mb-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+<div class="lg:col-span-8">
+<span class="uppercase tracking-[0.2em] text-[0.75rem] font-bold text-primary mb-6 block">Our Global Commitment</span>
+<h1 class="font-headline text-[3.5rem] leading-[1.1] font-extrabold tracking-tighter text-on-surface mb-8">
+                        The Architecture of <br/><span class="text-primary italic">Human Flourishing.</span>
+</h1>
+<p class="text-lg text-on-surface-variant max-w-2xl font-light leading-relaxed">
+                        We invest in the fundamental systems that define the human experience. Our work is not about temporary relief, but about the permanent elevation of dignity through sustainable infrastructure and local empowerment.
+                    </p>
+</div>
+<div class="lg:col-span-4 hidden lg:block">
+<div class="aspect-square bg-surface-container overflow-hidden rounded-xl">
+<img alt="Social Impact" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="high-contrast black and white portrait of diverse community members looking directly at the camera with dignified expressions in soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgAifgZLgqbmOG8c99CX8nPbU40jLR_T4uWaSZEAkdSCpgUTotM8SwNjNLps902y8jqF6Tb5wMLOsrT4OR9vJ4uj5oAtqBW6fu_RmeUwFqhN_X9VPIiI8ZYhSIqjL_cY3vERExRgQ4EhtBSmBdrES4Y2p9npR3KuTgCmVD6ijlsZKPQh_a5kyTyYgsTO9w4jcn7HAbFTL0QDC5V7HA2A-S1Ldzr1xZyV2iVtpNPqoJFBSbqlODWT3pau5-S3tUSJWvovTgL-UoyOor"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Areas of Impact: Bento Grid Layout -->
+<section class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-24">
+<!-- Health - Large Hero Card -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-lowest h-[500px]">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="medical professional in clean clinic setting holding a digital tablet with warm sunlight streaming through windows and soft medicinal aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW3SqZM90Qaxz8PwzwiyIGVgc7pepcp1EqVGlHXSVOkUWPjW7uTBfBCwAqXBrNOX8OpzPJvGq1oX1u7Js8HNsfIfnB2jM3k--B0-o01RpNgG2reRst0Am04Cexwt3D3EVQYmsaBx6ayhDSV8dLOl7Xg5LuaU8Mvh9a9hXmJOtFvdrcR3kmTD6yAPMcxOr0HbzSFuKL_a6KVCZQtZl_4GCm6oU-Va75u1f4AkEFS9LOnxD1dc9tMXvCdPP8OJOVZQ380VeJC_cu444W"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10 text-on-primary">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 text-[10px] uppercase font-bold tracking-widest rounded mb-4 inline-block">Impact Area 01</span>
+<h3 class="font-headline text-3xl font-bold mb-3">Global Health Equity</h3>
+<p class="text-on-primary-container max-w-md mb-6 font-light">Bridging the gap in primary care through decentralised clinics and local health worker networks in underserved regions.</p>
+<a class="inline-flex items-center text-sm font-semibold group/link" href="#">
+                            Learn More <span class="material-symbols-outlined ml-2 transition-transform group-hover/link:translate-x-2">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Gender Equality - Vertical Card -->
+<div class="md:col-span-4 group bg-secondary-container rounded-xl p-8 flex flex-col justify-between">
+<div>
+<span class="text-on-secondary-container text-[10px] uppercase font-bold tracking-widest mb-8 block">Impact Area 02</span>
+<h3 class="font-headline text-2xl font-bold text-primary mb-4 leading-tight">Gender Equality &amp; Agency</h3>
+<p class="text-on-secondary-container font-light leading-relaxed">Systemic dismantling of barriers for women through legal advocacy and economic micro-grants.</p>
+</div>
+<div class="mt-8 rounded-lg overflow-hidden h-48">
+<img class="w-full h-full object-cover" data-alt="determined group of diverse professional women in a brightly lit collaborative workspace with minimalist design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMz-HnyiLdPT5Dw_WHUJbZzwoVvArbserW8EXtbWO3d1DmcJDkbt1CPCSM7kCeyMGLvLMk6r6-6HkBx6T1ljEobo9BHChSZQ6UG4TbQCdfEF-dgLGaffaW27e-GnbOP2h1gBDbmhKz31rUdINrLvgxAuWqT39XvKYEZmMVCdM0saysrdC3YL7zmCBS1iuP2oYJsDGUnZbNpOENccBTYbnRHz7SVMml1ieVNU7TxPKCMZzliH7s6PP44B9Vt6NCnHTszyClkb_Kr-JZ"/>
+</div>
+</div>
+<!-- Community Development - Horizontal Card -->
+<div class="md:col-span-4 bg-surface-container-low p-8 rounded-xl flex flex-col justify-between border-b-2 border-transparent hover:border-primary transition-all">
+<div>
+<span class="text-on-surface-variant text-[10px] uppercase font-bold tracking-widest mb-6 block">Impact Area 03</span>
+<h3 class="font-headline text-xl font-bold text-on-surface mb-3">Community Resilience</h3>
+<p class="text-on-surface-variant text-sm font-light leading-relaxed mb-6">Designing urban spaces and rural hubs that foster social cohesion and economic mobility.</p>
+</div>
+<a class="text-primary text-xs font-bold uppercase tracking-widest flex items-center" href="#">
+                        The Blueprint <span class="material-symbols-outlined text-sm ml-2">north_east</span>
+</a>
+</div>
+<!-- Education - Square Card -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-primary-container">
+<img class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity" data-alt="stack of vintage books with soft warm library lighting and dust motes dancing in the sunbeams" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf10WfEzto2y_xkjkErY6UlLFjdi1bZB7_FtZBJZjmDUMdRIsopEsGc7WrQMaOfaxB1rvLcQ7DGRakg7cSexRKgknErdlBgTreQgiDUEJhJmxbpkn-GMxTnv0_z2XrwevN-02fusW1Dv9texmJc5BTX4UvqCe-Se7ODR9dtm-L4cWCj6TNrHNziqzbWY9vNPM4gHojsNDe8fs2pEHizslJVe7DUhQVcEwUv1KW5RfbzxB8el22n3IPLXy8FBphz-gJqDQTEg7IRmq7"/>
+<div class="relative p-8 h-full flex flex-col justify-center items-center text-center">
+<h3 class="font-headline text-2xl font-bold text-on-primary mb-2">Education</h3>
+<p class="text-on-primary-container text-sm font-light">Radical literacy initiatives for a digital age.</p>
+<button class="mt-6 border border-on-primary-container/30 px-6 py-2 rounded-md text-xs font-bold text-on-primary hover:bg-on-primary hover:text-primary transition-colors">Explorer Curriculum</button>
+</div>
+</div>
+<!-- Technology - Narrow High Card -->
+<div class="md:col-span-4 bg-tertiary-container text-on-tertiary-container p-8 rounded-xl flex flex-col justify-end min-h-[300px]">
+<div class="mb-auto">
+<span class="material-symbols-outlined text-4xl opacity-50">memory</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-2">Ethical Technology</h3>
+<p class="text-sm font-light opacity-80 leading-relaxed">Developing open-source tools that empower local governance and digital sovereignty.</p>
+</div>
+</div>
+<!-- Asymmetric Sidebar Layout for Grants & Skills -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<!-- Main Content: Grants -->
+<div class="lg:col-span-8">
+<div class="mb-12">
+<h2 class="font-headline text-3xl font-extrabold tracking-tight mb-4">Committed Grants</h2>
+<p class="text-on-surface-variant font-light">Our active investments for the current fiscal quarter.</p>
+</div>
+<div class="space-y-4">
+<!-- Grant Row 1 -->
+<div class="group flex items-center p-6 bg-surface-container-low rounded-xl hover:bg-surface-container transition-colors">
+<div class="w-16 h-16 bg-white rounded-lg flex items-center justify-center text-primary font-bold shadow-sm">
+                                HP
+                            </div>
+<div class="ml-6 flex-grow">
+<h4 class="font-headline font-bold text-lg">The Hellenic Project</h4>
+<p class="text-sm text-on-surface-variant">Infrastructure &amp; Sanitation • South Sudan</p>
+</div>
+<div class="text-right">
+<div class="font-bold text-primary">$2.4M</div>
+<div class="text-[10px] uppercase font-bold tracking-widest text-outline">Active</div>
+</div>
+</div>
+<!-- Grant Row 2 -->
+<div class="group flex items-center p-6 bg-surface-container-low rounded-xl hover:bg-surface-container transition-colors">
+<div class="w-16 h-16 bg-white rounded-lg flex items-center justify-center text-primary font-bold shadow-sm">
+                                VL
+                            </div>
+<div class="ml-6 flex-grow">
+<h4 class="font-headline font-bold text-lg">Vanguard Literacy</h4>
+<p class="text-sm text-on-surface-variant">Adult Education • Southeast Asia</p>
+</div>
+<div class="text-right">
+<div class="font-bold text-primary">$850K</div>
+<div class="text-[10px] uppercase font-bold tracking-widest text-outline">Funding</div>
+</div>
+</div>
+<!-- Grant Row 3 -->
+<div class="group flex items-center p-6 bg-surface-container-low rounded-xl hover:bg-surface-container transition-colors">
+<div class="w-16 h-16 bg-white rounded-lg flex items-center justify-center text-primary font-bold shadow-sm">
+                                AW
+                            </div>
+<div class="ml-6 flex-grow">
+<h4 class="font-headline font-bold text-lg">AquaWave Systems</h4>
+<p class="text-sm text-on-surface-variant">Renewable Energy • Coastal Peru</p>
+</div>
+<div class="text-right">
+<div class="font-bold text-primary">$1.1M</div>
+<div class="text-[10px] uppercase font-bold tracking-widest text-outline">Research</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar: Technical Skills -->
+<div class="lg:col-span-4">
+<div class="bg-surface-container-highest p-10 rounded-xl">
+<h3 class="font-headline text-xl font-bold mb-6 text-primary">Skills Initiatives</h3>
+<p class="text-sm text-on-surface-variant mb-8 leading-relaxed">
+                            Beyond capital, we provide technical mastery. Our global network of experts mentors local leaders in critical infrastructure maintenance and digital literacy.
+                        </p>
+<ul class="space-y-6">
+<li class="flex items-start">
+<span class="material-symbols-outlined text-primary mr-4 mt-1">code</span>
+<div>
+<h5 class="font-bold text-sm">Open Source Governance</h5>
+<p class="text-xs text-on-surface-variant">Training 400+ civic leaders in transparent data management.</p>
+</div>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-primary mr-4 mt-1">solar_power</span>
+<div>
+<h5 class="font-bold text-sm">Sustainable Energy Grid</h5>
+<p class="text-xs text-on-surface-variant">Technical certification for rural solar technicians.</p>
+</div>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-primary mr-4 mt-1">biotech</span>
+<div>
+<h5 class="font-bold text-sm">Bio-Science Labs</h5>
+<p class="text-xs text-on-surface-variant">Advanced diagnostics training for community clinics.</p>
+</div>
+</li>
+</ul>
+<div class="mt-12 pt-8 border-t border-outline-variant/30">
+<a class="block text-center bg-primary text-on-primary py-4 rounded-md font-bold text-sm" href="#">Volunteer Expertise</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-950 font-work-sans text-sm leading-relaxed">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-7xl mx-auto">
+<div class="col-span-1">
+<div class="text-xl font-bold text-emerald-950 dark:text-emerald-50 mb-6 font-headline">onewholefuture</div>
+<p class="text-stone-500 dark:text-stone-400 max-w-xs">An editorial collective and philanthropic engine dedicated to documenting and elevating the human story through intentional action.</p>
+</div>
+<div class="col-span-1">
+<h5 class="font-bold text-emerald-900 dark:text-emerald-500 mb-6">Explore</h5>
+<ul class="space-y-4">
+<li><a class="text-stone-500 dark:text-stone-400 hover:underline decoration-emerald-900/20 underline-offset-4 transition-opacity opacity-90 hover:opacity-100" href="#">Our Work</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:underline decoration-emerald-900/20 underline-offset-4 transition-opacity opacity-90 hover:opacity-100" href="#">Annual Report</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:underline decoration-emerald-900/20 underline-offset-4 transition-opacity opacity-90 hover:opacity-100" href="#">Global Partners</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h5 class="font-bold text-emerald-900 dark:text-emerald-500 mb-6">Company</h5>
+<ul class="space-y-4">
+<li><a class="text-stone-500 dark:text-stone-400 hover:underline decoration-emerald-900/20 underline-offset-4 transition-opacity opacity-90 hover:opacity-100" href="#">Contact</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:underline decoration-emerald-900/20 underline-offset-4 transition-opacity opacity-90 hover:opacity-100" href="#">Careers</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:underline decoration-emerald-900/20 underline-offset-4 transition-opacity opacity-90 hover:opacity-100" href="#">Newsroom</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h5 class="font-bold text-emerald-900 dark:text-emerald-500 mb-6">Legal</h5>
+<ul class="space-y-4">
+<li><a class="text-stone-500 dark:text-stone-400 hover:underline decoration-emerald-900/20 underline-offset-4 transition-opacity opacity-90 hover:opacity-100" href="#">Privacy Policy</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:underline decoration-emerald-900/20 underline-offset-4 transition-opacity opacity-90 hover:opacity-100" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-12 pb-12 text-stone-500 text-xs">
+            © 2024 onewholefuture. All rights reserved.
+        </div>
+</footer>
+</body></html>

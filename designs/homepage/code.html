@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#2e4d44",
+                    "tertiary-fixed": "#ffddb7",
+                    "on-background": "#1a1c1b",
+                    "on-tertiary-fixed": "#2a1700",
+                    "secondary-fixed": "#d4e7df",
+                    "on-primary-container": "#9bbdb1",
+                    "inverse-surface": "#2f312f",
+                    "secondary-container": "#d4e7df",
+                    "primary": "#17362e",
+                    "secondary": "#51625c",
+                    "outline-variant": "#c1c8c4",
+                    "surface": "#f9faf7",
+                    "background": "#f9faf7",
+                    "primary-container": "#2e4d44",
+                    "on-primary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e2e3e0",
+                    "inverse-primary": "#accec2",
+                    "surface-variant": "#e2e3e0",
+                    "primary-fixed": "#c7eade",
+                    "surface-bright": "#f9faf7",
+                    "surface-dim": "#d9dad7",
+                    "on-tertiary-container": "#d7ae7e",
+                    "surface-container-high": "#e8e8e6",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed": "#0f1e1a",
+                    "surface-container": "#edeeeb",
+                    "tertiary-container": "#5e411a",
+                    "on-tertiary-fixed-variant": "#5e411a",
+                    "on-primary-fixed": "#002019",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "inverse-on-surface": "#f0f1ee",
+                    "primary-fixed-dim": "#accec2",
+                    "tertiary": "#442b06",
+                    "secondary-fixed-dim": "#b8cbc3",
+                    "surface-tint": "#45655b",
+                    "tertiary-fixed-dim": "#e9bf8e",
+                    "surface-container-low": "#f3f4f1",
+                    "on-surface": "#1a1c1b",
+                    "outline": "#717975",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#576862",
+                    "on-surface-variant": "#414845",
+                    "on-secondary-fixed-variant": "#3a4a45"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Work Sans"],
+                    "label": ["Work Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+        .bleed-right {
+            margin-right: -100vw;
+            padding-right: 100vw;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/85 dark:bg-stone-900/85 backdrop-blur-xl shadow-[0_20px_40px_rgba(26,28,27,0.06)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="text-2xl font-bold text-emerald-950 dark:text-emerald-50 tracking-tighter font-headline">
+                onewholefuture
+            </div>
+<div class="hidden md:flex items-center gap-10 font-headline text-sm font-semibold tracking-tight">
+<a class="text-emerald-900 dark:text-emerald-400 border-b-2 border-emerald-900 dark:border-emerald-400 pb-1 transition-colors duration-300" href="#">About Us</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-emerald-300 transition-colors duration-300" href="#">Our Work</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-800 dark:hover:text-emerald-300 transition-colors duration-300" href="#">Ideas</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-surface-container-low px-4 py-2 rounded-full">
+<span class="material-symbols-outlined text-outline text-lg" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm placeholder:text-outline-variant w-48 font-body" placeholder="Search the archive..." type="text"/>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-md font-headline text-sm font-semibold scale-98 active:opacity-80 transition-all">
+                    Ways to Give
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden bg-surface">
+<div class="max-w-7xl mx-auto px-8 w-full editorial-grid relative z-10">
+<div class="col-span-12 lg:col-span-7 py-20">
+<span class="font-label text-sm font-semibold text-primary uppercase tracking-[0.2em] mb-6 block">Annual Global Report 2024</span>
+<h1 class="font-headline text-primary text-5xl lg:text-7xl font-extrabold tracking-tighter leading-[1.05] mb-8">
+                        The Future of Our Shared <br/>Human Story.
+                    </h1>
+<p class="font-body text-lg text-on-surface-variant max-w-xl leading-relaxed mb-10">
+                        We are documenting, preserving, and empowering communities across 40 nations. onewholefuture is a global movement dedicated to protecting the dignity of every individual through data, art, and direct intervention.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-md font-headline font-bold text-base hover:bg-primary-container transition-all shadow-xl shadow-primary/10">
+                            Ways to Give
+                        </button>
+<button class="flex items-center gap-2 px-8 py-4 font-headline font-bold text-primary border-b-2 border-primary/20 hover:border-primary transition-all">
+<span>Read the Impact Report</span>
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-5 relative mt-12 lg:mt-0">
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl relative">
+<img alt="Global Impact Hero" class="w-full h-full object-cover" data-alt="Intimate portrait of an elder artisan in a rural workshop with warm natural light hitting their face and hands" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASVpFfNsh-dhHHvQB3XNstNCqVdzFA0nz3QER095_EmldhXPaTXoWJq-oofNLaknZ1yALldbOS1S0iYLZFQ1-4i9PJyOVyq1Glgp4wMtcJUG5cr3cC75JFVSYYLaJR6jBbI9fQNTtx8Vyf2lVBIiBx3Cjw3CotVPoV9MKQQbEi3ET5cqBrwVhoaTXCp_vq9JYYqr54TVundBirzmHTKv0tx6P3tfGradpHdU2-DmWintsvek2uwUktQG4bIubc1l1rm7Qc_OA8Hj-D"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+</div>
+<!-- Overlapping Card -->
+<div class="absolute -bottom-10 -left-10 md:-left-20 bg-surface-container-lowest p-8 rounded-xl shadow-2xl max-w-sm hidden md:block">
+<span class="material-symbols-outlined text-tertiary-container text-4xl mb-4" data-icon="auto_awesome" data-weight="fill" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<h3 class="font-headline font-bold text-xl text-primary mb-2">3.2M Lives Touched</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed">Our work in digital literacy has opened new doors for marginalized communities worldwide.</p>
+</div>
+</div>
+</div>
+<!-- Decorative Background Element -->
+<div class="absolute top-0 right-0 w-1/3 h-full bg-surface-container-low -z-0 hidden lg:block"></div>
+</section>
+<!-- Pillars Section -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-2xl">
+<h2 class="font-headline text-4xl font-bold text-primary tracking-tight mb-6">Our Three Foundations</h2>
+<p class="font-body text-lg text-on-surface-variant">We operate at the intersection of cultural preservation, social equity, and future-ready innovation.</p>
+</div>
+<div class="h-[1px] flex-grow bg-outline-variant/20 mx-12 hidden lg:block mb-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Pillar 1: Our Work -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/2] overflow-hidden rounded-xl mb-8">
+<img alt="Our Work" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Group of diverse researchers collaborating in a modern open-space library with large windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxV7V_ZR4WZ5X820I_JEuPcdAOzVqhvgVtkSoQ-uz1oHTy17P512WOlHNRGZ6PyhK616pgKEt5dpQBgT7IMzxNxRihT_nuzSVuMu215OGBW3dR82GFZ1CYMsuXuaIOiHJMzbuSXdGEv7udN0ypVmj2sR84Opi10u2seMo3yefqJ3ygBMDbhKpEv7WqNdAiTE6uTgU4WDhddep2O_e2ojRAYroLylPWnVJOvrJa7AfQCg-68teXMTFl0v_1iJoyimfuNMXGv4VjzmIa"/>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-4 flex items-center justify-between">
+                            Our Work
+                            <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity" data-icon="north_east">north_east</span>
+</h3>
+<p class="font-body text-on-surface-variant leading-relaxed mb-6">Active interventions in healthcare, education, and digital infrastructure across developing corridors.</p>
+<div class="h-1 w-12 bg-tertiary-container group-hover:w-full transition-all duration-500"></div>
+</div>
+<!-- Pillar 2: About Us -->
+<div class="group cursor-pointer mt-0 md:mt-12">
+<div class="aspect-[3/2] overflow-hidden rounded-xl mb-8">
+<img alt="About Us" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Candid moment of NGO leadership team in a thoughtful discussion around a rustic wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnWRrcOo402wxzY7isQqMkXLf3XCSDBo_pZYj8Qbuxn9LsFaM7P8CKhEvtU5bU7YgMzCPs5VD-3kGCA1z7z4N6MRzSLxX7zHs71jZnR9NLbZYKq4eMoHYhnSPvHscj3HIzu69wt_oq2AOZSGnd7e_H96ITJliiTa6Efb7HAMmZ4F4YUw8YlLA2zj866IG_Lru3JEVXN9hH9ZAc4u8s8NCBfLOZygRXdWehcAFN1qE00wTgpV9pGNpSWVFqbVEPF-c0eU8Nky6GhZ8f"/>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-4 flex items-center justify-between">
+                            About Us
+                            <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity" data-icon="north_east">north_east</span>
+</h3>
+<p class="font-body text-on-surface-variant leading-relaxed mb-6">A collective of thinkers, doers, and historians committed to a world where no story goes unheard.</p>
+<div class="h-1 w-12 bg-primary-container group-hover:w-full transition-all duration-500"></div>
+</div>
+<!-- Pillar 3: Ideas -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/2] overflow-hidden rounded-xl mb-8">
+<img alt="Ideas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Vibrant abstract projection of data visualizations onto a curved gallery wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpkKm6hj6RA6P_fR0uGOxTqpRVeYUki9ST3Xq4-JVCdlwk9AqvpsuG2HpurIs84qpS8EMjyWGJUN0Ta6zK0PgpJFNbqQNo5uQ60F2g-xhUWOEHsW2z9UI-l8sdjxsAKX9zUl64EQz4k0bSZLn7Gn1saPSXk0SG0DGwz3ScHkfeqHszofKdDFnU9iVOdAAfrY09GKIzYH_IF2ysTxSyewryUET-nhSAoTUg3AnSdTG4CRTSMujyjkd8nhX_moASh7fi1Hz-10yvZC0D"/>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-4 flex items-center justify-between">
+                            Ideas
+                            <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity" data-icon="north_east">north_east</span>
+</h3>
+<p class="font-body text-on-surface-variant leading-relaxed mb-6">Publishing ground-breaking research on human behavior, anthropology, and digital ethics.</p>
+<div class="h-1 w-12 bg-secondary-container group-hover:w-full transition-all duration-500"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Impact in Numbers Section -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
+<div class="space-y-2">
+<span class="font-headline text-6xl font-extrabold text-primary tracking-tighter">$142M</span>
+<p class="font-label text-sm uppercase tracking-widest text-secondary font-semibold">Grants Allocated</p>
+</div>
+<div class="space-y-2">
+<span class="font-headline text-6xl font-extrabold text-primary tracking-tighter">52</span>
+<p class="font-label text-sm uppercase tracking-widest text-secondary font-semibold">Countries Reached</p>
+</div>
+<div class="space-y-2">
+<span class="font-headline text-6xl font-extrabold text-primary tracking-tighter">850k</span>
+<p class="font-label text-sm uppercase tracking-widest text-secondary font-semibold">Digital Archives Created</p>
+</div>
+<div class="space-y-2">
+<span class="font-headline text-6xl font-extrabold text-primary tracking-tighter">12k+</span>
+<p class="font-label text-sm uppercase tracking-widest text-secondary font-semibold">Local Partners</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Latest News Section -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex items-center gap-4 mb-16">
+<h2 class="font-headline text-4xl font-bold text-primary tracking-tight">The News Portal</h2>
+<div class="h-[2px] w-20 bg-tertiary"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- News Card 1 -->
+<div class="group bg-surface-container-lowest p-6 rounded-xl transition-all hover:shadow-xl">
+<span class="font-label text-xs text-secondary font-bold uppercase tracking-widest block mb-4">Field Report • Oct 24</span>
+<h4 class="font-headline text-xl font-bold text-primary mb-4 group-hover:text-tertiary transition-colors">Preserving Oral Traditions in the Amazon Basin</h4>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed mb-6">Our team recently completed a 6-month journey documenting the ancestral linguistic patterns of the Matsés people...</p>
+<a class="inline-flex items-center gap-2 font-headline font-bold text-sm text-primary" href="#">
+                            Read Article
+                            <span class="material-symbols-outlined text-base" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+<!-- News Card 2 -->
+<div class="group bg-surface-container-lowest p-6 rounded-xl transition-all hover:shadow-xl">
+<span class="font-label text-xs text-secondary font-bold uppercase tracking-widest block mb-4">Innovation • Oct 12</span>
+<h4 class="font-headline text-xl font-bold text-primary mb-4 group-hover:text-tertiary transition-colors">Blockchain for Humanitarian Aid Transparency</h4>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed mb-6">Exploring how decentralized ledgers are revolutionizing the way we track every dollar from donor to destination...</p>
+<a class="inline-flex items-center gap-2 font-headline font-bold text-sm text-primary" href="#">
+                            Read Article
+                            <span class="material-symbols-outlined text-base" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+<!-- News Card 3 -->
+<div class="group bg-surface-container-lowest p-6 rounded-xl transition-all hover:shadow-xl">
+<span class="font-label text-xs text-secondary font-bold uppercase tracking-widest block mb-4">Event • Sep 28</span>
+<h4 class="font-headline text-xl font-bold text-primary mb-4 group-hover:text-tertiary transition-colors">The Annual onewholefuture Gala: NYC Highlights</h4>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed mb-6">Relive the moments from our biggest fundraising night of the year, where art met advocacy at the MET...</p>
+<a class="inline-flex items-center gap-2 font-headline font-bold text-sm text-primary" href="#">
+                            Read Article
+                            <span class="material-symbols-outlined text-base" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Join Our Mission Banner -->
+<section class="max-w-7xl mx-auto px-8 mb-32">
+<div class="bg-primary rounded-xl p-12 lg:p-20 relative overflow-hidden">
+<!-- Background Texture -->
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_50%,#ffffff_0%,transparent_50%)]"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="font-headline text-4xl lg:text-5xl font-extrabold text-on-primary tracking-tighter mb-6">Become a Guardian of History.</h2>
+<p class="font-body text-lg text-secondary-fixed leading-relaxed">Join 50,000+ global citizens receiving our monthly dispatch on impact, ethics, and human progress.</p>
+</div>
+<div>
+<form class="flex flex-col sm:flex-row gap-4">
+<input class="flex-grow bg-surface-container-lowest/10 border-none rounded-md px-6 py-4 text-on-primary placeholder:text-on-primary-container focus:ring-2 focus:ring-on-primary font-body" placeholder="Enter your email address" type="email"/>
+<button class="bg-surface-container-lowest text-primary px-8 py-4 rounded-md font-headline font-bold hover:bg-secondary-fixed transition-all" type="submit">
+                                Join the Mission
+                            </button>
+</form>
+<p class="font-label text-xs text-on-primary-container mt-4 text-center sm:text-left">By signing up, you agree to our Privacy Policy and Terms of Service.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-950 w-full rounded-t-none">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-7xl mx-auto">
+<div class="md:col-span-1">
+<div class="text-xl font-bold text-emerald-950 dark:text-emerald-50 font-headline mb-6">onewholefuture</div>
+<p class="font-work-sans text-sm leading-relaxed text-stone-500 dark:text-stone-400 mb-8 max-w-xs">
+                    Building a sustainable legacy for humanity through preservation and direct social action.
+                </p>
+<div class="flex gap-4">
+<a class="text-stone-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="public">public</span></a>
+<a class="text-stone-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="share">share</span></a>
+<a class="text-stone-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="rss_feed">rss_feed</span></a>
+</div>
+</div>
+<div>
+<h5 class="font-headline font-bold text-emerald-900 dark:text-emerald-500 mb-6 uppercase text-xs tracking-widest">Connect</h5>
+<ul class="space-y-4 font-work-sans text-sm">
+<li><a class="text-stone-500 dark:text-stone-400 hover:underline decoration-emerald-900/20 underline-offset-4 transition-opacity" href="#">Contact</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:underline decoration-emerald-900/20 underline-offset-4 transition-opacity" href="#">Careers</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:underline decoration-emerald-900/20 underline-offset-4 transition-opacity" href="#">Press Kit</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:underline decoration-emerald-900/20 underline-offset-4 transition-opacity" href="#">Partners</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-headline font-bold text-emerald-900 dark:text-emerald-500 mb-6 uppercase text-xs tracking-widest">Legal</h5>
+<ul class="space-y-4 font-work-sans text-sm">
+<li><a class="text-stone-500 dark:text-stone-400 hover:underline decoration-emerald-900/20 underline-offset-4 transition-opacity" href="#">Privacy Policy</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:underline decoration-emerald-900/20 underline-offset-4 transition-opacity" href="#">Terms of Service</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:underline decoration-emerald-900/20 underline-offset-4 transition-opacity" href="#">Donor Bill of Rights</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:underline decoration-emerald-900/20 underline-offset-4 transition-opacity" href="#">Transparency</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-headline font-bold text-emerald-900 dark:text-emerald-500 mb-6 uppercase text-xs tracking-widest">Global Offices</h5>
+<ul class="space-y-4 font-work-sans text-sm text-stone-500 dark:text-stone-400">
+<li class="flex gap-2">
+<span class="material-symbols-outlined text-xs mt-1" data-icon="location_on">location_on</span>
+<span>New York: 245 5th Ave, NY 10016</span>
+</li>
+<li class="flex gap-2">
+<span class="material-symbols-outlined text-xs mt-1" data-icon="location_on">location_on</span>
+<span>Nairobi: Riverside Dr, Block A</span>
+</li>
+<li class="flex gap-2">
+<span class="material-symbols-outlined text-xs mt-1" data-icon="location_on">location_on</span>
+<span>Geneva: Quai Wilson 47</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-12 py-10 border-t border-stone-200 dark:border-stone-800 flex flex-col md:flex-row justify-between items-center gap-6">
+<span class="font-work-sans text-sm text-stone-500 dark:text-stone-400">© 2024 onewholefuture. All rights reserved.</span>
+<div class="flex items-center gap-2 text-emerald-900 dark:text-emerald-400 font-semibold text-sm">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+<span>Certified NGO Member</span>
+</div>
+</div>
+</footer>
+</body></html>
