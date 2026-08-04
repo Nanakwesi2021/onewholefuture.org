@@ -30,8 +30,8 @@ const MOCK_ARTICLES = [
 
 const NewsPortalPage = () => {
   const [activeCategory, setActiveCategory] = useState('All');
-  const [articles, setArticles] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [articles, setArticles] = useState(MOCK_ARTICLES);
+  const [loading, setLoading] = useState(false);
   const [newsletterEmail, setNewsletterEmail] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [subscribed, setSubscribed] = useState(false);
@@ -41,17 +41,16 @@ const NewsPortalPage = () => {
     const q = query(collection(db, 'news'), orderBy('createdAt', 'desc'));
     const unsubscribe = onSnapshot(q, 
       (snapshot) => {
-        const newsData = snapshot.docs.map(doc => ({
-          id: doc.id,
-          ...doc.data()
-        }));
-        setArticles(newsData);
-        setLoading(false);
+        if (!snapshot.empty) {
+          const newsData = snapshot.docs.map(doc => ({
+            id: doc.id,
+            ...doc.data()
+          }));
+          setArticles(newsData);
+        }
       },
-      (error) => {
-        console.error("Firestore news subscription error. Using local mock data:", error);
-        setArticles(MOCK_ARTICLES);
-        setLoading(false);
+      (err) => {
+        console.warn("Firestore news fetch notice. Retaining local articles:", err);
       }
     );
 
@@ -59,6 +58,7 @@ const NewsPortalPage = () => {
       unsubscribe();
     };
   }, []);
+
 
   const handleNewsletterSubmit = async (e) => {
     e.preventDefault();

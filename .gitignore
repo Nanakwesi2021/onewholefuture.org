@@ -26,3 +26,9 @@ dist-ssr
 # Environment variables
 .env
 
+# Deployment builds
+hostinger-deploy.zip
+scratch/
+
+
+

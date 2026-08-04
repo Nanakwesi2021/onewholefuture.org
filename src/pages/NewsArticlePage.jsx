@@ -3,35 +3,88 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import { db } from '../firebase';
 import { doc, getDoc } from 'firebase/firestore';
 
+const MOCK_ARTICLES_MAP = {
+  'mock-news-1': {
+    id: 'mock-news-1',
+    title: 'Transforming Healthcare Delivery in Ghana: The 2026 Fellowship',
+    category: 'Impact',
+    description: 'A summary of the achievements and local community impact made by our 2026 Health Tech Fellowship cohort.',
+    content: `We are proud to announce the successful deployment of five digital health systems in rural clinics, serving over 10,000 residents across three districts.
+
+Through strategic collaboration with the Ministry of Health and local medical officers, our fellows developed low-latency diagnostic tools capable of functioning offline. Over 40 healthcare workers have received specialized training to operate these digital systems, ensuring long-term sustainability.
+
+Key Milestones Achieved:
+- 10,000+ patient records digitized safely with end-to-end encryption.
+- 5 rural clinics fully equipped with solar-powered digital tablets.
+- 40+ local healthcare practitioners certified in digital medical triage.
+
+Looking forward, the 2027 expansion phase aims to scale these digital health solutions to 15 additional sub-districts across West Africa.`,
+    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=85&w=800',
+    createdAt: new Date('2026-06-14T11:00:00Z')
+  },
+  'mock-news-2': {
+    id: 'mock-news-2',
+    title: 'Climate Resilience Lab Receives Strategic Funding Expansion',
+    category: 'Technology',
+    description: 'A new multi-year partnership enables expansion of climate-adaptive agricultural monitoring tech.',
+    content: `Through our collaboration with international climate agencies, we are deploying 200 micro-weather stations to support smallholder farmers across vulnerable agricultural corridors.
+
+These weather stations leverage AI-driven micro-climate modeling to provide real-time irrigation and planting advisories via SMS and voice alerts in local languages.
+
+Key Milestones Achieved:
+- 200 micro-weather stations manufactured and distributed.
+- 15,000 smallholder farming households receiving daily agricultural advisories.
+- 30% average increase in crop yields recorded across pilot farming cooperatives.`,
+    image: 'https://images.unsplash.com/photo-1530631676643-0552cf58800e?auto=format&fit=crop&q=85&w=800',
+    createdAt: new Date('2026-06-11T13:20:00Z')
+  }
+};
+
 const NewsArticlePage = () => {
   const { articleId } = useParams();
   const navigate = useNavigate();
-  const [article, setArticle] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [isVisible, setIsVisible] = useState(false);
+  const [article, setArticle] = useState(() => MOCK_ARTICLES_MAP[articleId] || null);
+  const [loading, setLoading] = useState(() => !MOCK_ARTICLES_MAP[articleId]);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
+    if (MOCK_ARTICLES_MAP[articleId]) {
+      setArticle(MOCK_ARTICLES_MAP[articleId]);
+      setLoading(false);
+      setIsVisible(true);
+      return;
+    }
+
+    let isMounted = true;
     const fetchArticle = async () => {
       try {
         const docRef = doc(db, 'news', articleId);
         const docSnap = await getDoc(docRef);
 
-        if (docSnap.exists()) {
-          setArticle({ id: docSnap.id, ...docSnap.data() });
-        } else {
-          console.log("No such document!");
-          navigate('/news');
+        if (isMounted) {
+          if (docSnap.exists()) {
+            setArticle({ id: docSnap.id, ...docSnap.data() });
+          } else {
+            console.warn("Article not found in Firestore.");
+            navigate('/news');
+          }
         }
       } catch (error) {
         console.error("Error fetching article:", error);
-        navigate('/news');
+        if (isMounted) navigate('/news');
       } finally {
-        setLoading(false);
-        setTimeout(() => setIsVisible(true), 50);
+        if (isMounted) {
+          setLoading(false);
+          setIsVisible(true);
+        }
       }
     };
 
     fetchArticle();
+
+    return () => {
+      isMounted = false;
+    };
   }, [articleId, navigate]);
 
   if (loading) {
