@@ -4,15 +4,17 @@ import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { Link } from 'react-router-dom';
 
 const HERO_IMAGES = [
-  "/image/kojo-nana-GtnFtsPXKME-unsplash.webp",
-  "/image/young-millennials-african-friends-outdoor-gym-happy-black-people-having-fun-together-generation-z-friendship-concept.webp",
-  "/image/moses-janga-oKipTpccpQE-unsplash.webp"
+  "/images/sim_banner.jpg",
+  "/images/sim_nail_design.jpg",
+  "/images/sim_makeup.jpg",
+  "/images/sim_lash_nails.jpg",
+  "/image/young-millennials-african-friends-outdoor-gym-happy-black-people-having-fun-together-generation-z-friendship-concept.webp"
 ];
 
 const PILLAR_IMAGES = {
   education: "/image/medical-assistant-student-reading-green-lamp-library.webp",
   healthcare: "/image/jeffrey-ofori-tOshpNl-sW4-unsplash.webp",
-  empowerment: "/image/peaceful-businessman-vr-headset-enjoying-virtual-video.webp"
+  empowerment: "/images/sim_nail_design.jpg"
 };
 
 const STATS = [

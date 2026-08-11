@@ -75,13 +75,23 @@ const MOCK_APPLICANTS = [
 
 const MOCK_ARTICLES = [
   {
+    id: 'mock-sim-movement',
+    title: 'Youth Empowerment Initiative – Skills to Income (SIM) Movement',
+    category: 'Impact',
+    description: 'One Whole Future Foundation supported the youth-led Skills to Income (SIM) Movement, serving as strategic partner and mentor to a two-day programme equipping young people with practical skills and entrepreneurial capabilities.',
+    content: 'One Whole Future Foundation provided financial and operational support to the youth-led Skills to Income (SIM) Movement, serving as both a strategic partner and mentor throughout the planning and implementation of the initiative.',
+    image: '/images/sim_banner.jpg',
+    featured: true,
+    createdAt: { toDate: () => new Date('2026-07-22T08:00:00Z') }
+  },
+  {
     id: 'mock-news-1',
     title: 'Transforming Healthcare Delivery in Ghana: The 2026 Fellowship',
     category: 'Impact',
     description: 'A summary of the achievements and local community impact made by our 2026 Health Tech Fellowship cohort.',
     content: 'We are proud to announce the successful deployment of five digital health systems in rural clinics, serving over 10,000 residents across three districts.',
     image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=85&w=800',
-    featured: true,
+    featured: false,
     createdAt: { toDate: () => new Date('2026-06-14T11:00:00Z') }
   },
   {
@@ -159,7 +169,21 @@ const AdminPortalPage = () => {
           id: doc.id,
           ...doc.data()
         }));
-        setArticles(news);
+
+        const merged = [...news];
+        MOCK_ARTICLES.forEach(mock => {
+          if (!merged.some(a => a.id === mock.id || (a.title && mock.title && a.title.trim().toLowerCase() === mock.title.trim().toLowerCase()))) {
+            merged.push(mock);
+          }
+        });
+
+        merged.sort((a, b) => {
+          const dateA = a.createdAt?.toDate ? a.createdAt.toDate() : (a.createdAt instanceof Date ? a.createdAt : new Date(a.createdAt || 0));
+          const dateB = b.createdAt?.toDate ? b.createdAt.toDate() : (b.createdAt instanceof Date ? b.createdAt : new Date(b.createdAt || 0));
+          return dateB - dateA;
+        });
+
+        setArticles(merged);
         setIsUsingMockNews(false);
       },
       (error) => {

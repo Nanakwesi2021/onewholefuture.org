@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
@@ -6,11 +6,41 @@ const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [visible, setVisible] = useState(true);
   const [expandedSection, setExpandedSection] = useState(null);
+  const lastScrollYRef = useRef(0);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
+    let ticking = false;
+
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
+          const previousScrollY = lastScrollYRef.current;
+          
+          setScrolled(currentScrollY > 20);
+
+          if (currentScrollY <= 40) {
+            // Always show at top of page
+            setVisible(true);
+          } else if (currentScrollY > previousScrollY + 6 && currentScrollY > 100) {
+            // Scrolling down -> hide navbar & close any open desktop dropdowns
+            setVisible(false);
+            setActiveMenu(null);
+          } else if (currentScrollY < previousScrollY - 6) {
+            // Scrolling up -> reveal navbar
+            setVisible(true);
+          }
+
+          lastScrollYRef.current = currentScrollY;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -27,6 +57,7 @@ const Navbar = () => {
       setMobileMenuOpen(false);
       setActiveMenu(null);
       setExpandedSection(null);
+      setVisible(true);
     }, 0);
     return () => clearTimeout(timer);
   }, [location.pathname]);
@@ -67,7 +98,9 @@ const Navbar = () => {
 
   return (
     <nav 
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ease-in-out ${
+        visible || mobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'
+      } ${
         scrolled ? 'bg-white/95 backdrop-blur-xl shadow-xl py-3' : 'bg-white/80 backdrop-blur-md py-5'
       } border-b border-outline-variant/10`}
       onMouseLeave={() => setActiveMenu(null)}
