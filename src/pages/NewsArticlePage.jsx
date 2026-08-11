@@ -80,7 +80,7 @@ Key Milestones:
 - 300+ youth farmers trained in sustainable agriculture.
 - 4 cooperative storage and distribution nodes established.
 - 35% reduction in post-harvest loss reported across partner farms.`,
-    image: '/image/kojo-nana-GtnFtsPXKME-unsplash.webp',
+    image: '/images/farming_agribusiness.jpg',
     readTime: '4 min read',
     createdAt: new Date('2026-05-28T09:30:00Z')
   },

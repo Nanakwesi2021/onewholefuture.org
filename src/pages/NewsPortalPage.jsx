@@ -50,7 +50,7 @@ const MOCK_ARTICLES = [
     category: 'Community',
     description: 'Equipping rural youth with tech-driven farming practices and market access to build sustainable community food security.',
     content: 'Our Community Action teams are working with over 300 young agri-entrepreneurs in the Eastern and Volta regions, introducing climate-smart farming and direct-to-market logistics.',
-    image: '/image/kojo-nana-GtnFtsPXKME-unsplash.webp',
+    image: '/images/farming_agribusiness.jpg',
     featured: false,
     readTime: '4 min read',
     createdAt: { toDate: () => new Date('2026-05-28T09:30:00Z') }
